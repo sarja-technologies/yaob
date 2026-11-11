@@ -1,0 +1,4231 @@
+{
+ "version": 1,
+ "seed": 20261111,
+ "built_at_rev": 2,
+ "built": "2026-11-11T09:03:02Z",
+ "sizes": {
+  "fact_paraphrase": 64,
+  "canary_paraphrase": 40,
+  "canary_statement": 20,
+  "two_hop": 30,
+  "procedure": 38,
+  "unsupported": 20,
+  "adversarial": 24
+ },
+ "tasks": [
+  {
+   "id": "fact_paraphrase-001",
+   "family": "fact_paraphrase",
+   "question": "Coptic language is located in which country?",
+   "gold": [
+    "Egypt",
+    "Ancient Egypt"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q36155"
+   ],
+   "expect_mpns": [
+    "language-linguistics"
+   ],
+   "forbid_mpns": [],
+   "prop": "country"
+  },
+  {
+   "id": "fact_paraphrase-002",
+   "family": "fact_paraphrase",
+   "question": "Maltese language takes its name from what?",
+   "gold": [
+    "Malta"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q9166"
+   ],
+   "expect_mpns": [
+    "language-linguistics",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "prop": "named after"
+  },
+  {
+   "id": "fact_paraphrase-003",
+   "family": "fact_paraphrase",
+   "question": "When did Quechuan languages come into being?",
+   "gold": [
+    "1st millennium"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q5218"
+   ],
+   "expect_mpns": [
+    "language-linguistics",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "prop": "inception"
+  },
+  {
+   "id": "fact_paraphrase-004",
+   "family": "fact_paraphrase",
+   "question": "On what date did Srinivasa Ramanujan die?",
+   "gold": [
+    "26 April 1920"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q83163"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of death"
+  },
+  {
+   "id": "fact_paraphrase-005",
+   "family": "fact_paraphrase",
+   "question": "Logarithm was discovered or invented by whom?",
+   "gold": [
+    "John Napier"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q11197"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "prop": "discoverer or inventor"
+  },
+  {
+   "id": "fact_paraphrase-006",
+   "family": "fact_paraphrase",
+   "question": "On what date was François Viète born?",
+   "gold": [
+    "1540"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q188623"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of birth"
+  },
+  {
+   "id": "fact_paraphrase-007",
+   "family": "fact_paraphrase",
+   "question": "Ethernet takes its name from what?",
+   "gold": [
+    "luminiferous aether",
+    "computer network"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q79984"
+   ],
+   "expect_mpns": [
+    "computing-ai"
+   ],
+   "forbid_mpns": [],
+   "prop": "named after"
+  },
+  {
+   "id": "fact_paraphrase-008",
+   "family": "fact_paraphrase",
+   "question": "Ray Tomlinson held citizenship of which country?",
+   "gold": [
+    "United States"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q92631"
+   ],
+   "expect_mpns": [
+    "computing-ai"
+   ],
+   "forbid_mpns": [],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "fact_paraphrase-009",
+   "family": "fact_paraphrase",
+   "question": "When did OpenGL come into being?",
+   "gold": [
+    "1 July 1992"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q178570"
+   ],
+   "expect_mpns": [
+    "computing-ai"
+   ],
+   "forbid_mpns": [],
+   "prop": "inception"
+  },
+  {
+   "id": "fact_paraphrase-010",
+   "family": "fact_paraphrase",
+   "question": "ASCII is located in which country?",
+   "gold": [
+    "United States"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q8815"
+   ],
+   "expect_mpns": [
+    "computing-ai"
+   ],
+   "forbid_mpns": [],
+   "prop": "country"
+  },
+  {
+   "id": "fact_paraphrase-011",
+   "family": "fact_paraphrase",
+   "question": "Niels Bohr died when?",
+   "gold": [
+    "18 November 1962"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q7085"
+   ],
+   "expect_mpns": [
+    "physics"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of death"
+  },
+  {
+   "id": "fact_paraphrase-012",
+   "family": "fact_paraphrase",
+   "question": "Decibel takes its name from what?",
+   "gold": [
+    "Alexander Graham Bell"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q5329"
+   ],
+   "expect_mpns": [
+    "physics",
+    "engineering-technology"
+   ],
+   "forbid_mpns": [],
+   "prop": "named after"
+  },
+  {
+   "id": "fact_paraphrase-013",
+   "family": "fact_paraphrase",
+   "question": "Carl David Anderson held citizenship of which country?",
+   "gold": [
+    "United States"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q169366"
+   ],
+   "expect_mpns": [
+    "physics"
+   ],
+   "forbid_mpns": [],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "fact_paraphrase-014",
+   "family": "fact_paraphrase",
+   "question": "Eugene Wigner died when?",
+   "gold": [
+    "1 January 1995"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q155790"
+   ],
+   "expect_mpns": [
+    "physics"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of death"
+  },
+  {
+   "id": "fact_paraphrase-015",
+   "family": "fact_paraphrase",
+   "question": "Germanium is written with which element symbol?",
+   "gold": [
+    "Ge"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q867"
+   ],
+   "expect_mpns": [
+    "chemistry"
+   ],
+   "forbid_mpns": [],
+   "prop": "element symbol"
+  },
+  {
+   "id": "fact_paraphrase-016",
+   "family": "fact_paraphrase",
+   "question": "Curium has which atomic number?",
+   "gold": [
+    "96"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q1876"
+   ],
+   "expect_mpns": [
+    "physics",
+    "chemistry"
+   ],
+   "forbid_mpns": [],
+   "prop": "atomic number"
+  },
+  {
+   "id": "fact_paraphrase-017",
+   "family": "fact_paraphrase",
+   "question": "Francis William Aston was born when?",
+   "gold": [
+    "1 September 1877"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q102291"
+   ],
+   "expect_mpns": [
+    "chemistry"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of birth"
+  },
+  {
+   "id": "fact_paraphrase-018",
+   "family": "fact_paraphrase",
+   "question": "Jacobus Henricus van 't Hoff was born when?",
+   "gold": [
+    "30 August 1852"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q102822"
+   ],
+   "expect_mpns": [
+    "chemistry"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of birth"
+  },
+  {
+   "id": "fact_paraphrase-019",
+   "family": "fact_paraphrase",
+   "question": "Western honey bee is classified under which parent taxon?",
+   "gold": [
+    "Apis"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q30034"
+   ],
+   "expect_mpns": [
+    "biology"
+   ],
+   "forbid_mpns": [],
+   "prop": "parent taxon"
+  },
+  {
+   "id": "fact_paraphrase-020",
+   "family": "fact_paraphrase",
+   "question": "Jaguar started when?",
+   "gold": [
+    "about 500,000 years ago"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q35694"
+   ],
+   "expect_mpns": [
+    "biology",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "prop": "start time"
+  },
+  {
+   "id": "fact_paraphrase-021",
+   "family": "fact_paraphrase",
+   "question": "Nematode started when?",
+   "gold": [
+    "about 525,000,000 years ago"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q5185"
+   ],
+   "expect_mpns": [
+    "biology"
+   ],
+   "forbid_mpns": [],
+   "prop": "start time"
+  },
+  {
+   "id": "fact_paraphrase-022",
+   "family": "fact_paraphrase",
+   "question": "Canidae started when?",
+   "gold": [
+    "about 39,750,000 years ago"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q25324"
+   ],
+   "expect_mpns": [
+    "biology"
+   ],
+   "forbid_mpns": [],
+   "prop": "start time"
+  },
+  {
+   "id": "fact_paraphrase-023",
+   "family": "fact_paraphrase",
+   "question": "Dolomite (mineral) has which chemical formula?",
+   "gold": [
+    "CaMg(CO₃)₂"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q167741"
+   ],
+   "expect_mpns": [
+    "earth-environment"
+   ],
+   "forbid_mpns": [],
+   "prop": "chemical formula"
+  },
+  {
+   "id": "fact_paraphrase-024",
+   "family": "fact_paraphrase",
+   "question": "Garnet takes its name from what?",
+   "gold": [
+    "pomegranate"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q105368"
+   ],
+   "expect_mpns": [
+    "earth-environment"
+   ],
+   "forbid_mpns": [],
+   "prop": "named after"
+  },
+  {
+   "id": "fact_paraphrase-025",
+   "family": "fact_paraphrase",
+   "question": "Permafrost is located in which country?",
+   "gold": [
+    "Canada",
+    "Russia",
+    "United States"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q179918"
+   ],
+   "expect_mpns": [
+    "earth-environment",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "prop": "country"
+  },
+  {
+   "id": "fact_paraphrase-026",
+   "family": "fact_paraphrase",
+   "question": "Neoproterozoic started when?",
+   "gold": [
+    "about 1,000,000,000 years ago"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q191935"
+   ],
+   "expect_mpns": [
+    "earth-environment"
+   ],
+   "forbid_mpns": [],
+   "prop": "start time"
+  },
+  {
+   "id": "fact_paraphrase-027",
+   "family": "fact_paraphrase",
+   "question": "Miranda (moon) was discovered or invented by whom?",
+   "gold": [
+    "Gerard Kuiper"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q3352"
+   ],
+   "expect_mpns": [
+    "astronomy"
+   ],
+   "forbid_mpns": [],
+   "prop": "discoverer or inventor"
+  },
+  {
+   "id": "fact_paraphrase-028",
+   "family": "fact_paraphrase",
+   "question": "When did Maunakea Observatories come into being?",
+   "gold": [
+    "1968"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q831790"
+   ],
+   "expect_mpns": [
+    "astronomy"
+   ],
+   "forbid_mpns": [],
+   "prop": "inception"
+  },
+  {
+   "id": "fact_paraphrase-029",
+   "family": "fact_paraphrase",
+   "question": "Vela (constellation) was discovered or invented by whom?",
+   "gold": [
+    "Nicolas Louis de Lacaille"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q10521"
+   ],
+   "expect_mpns": [
+    "astronomy"
+   ],
+   "forbid_mpns": [],
+   "prop": "discoverer or inventor"
+  },
+  {
+   "id": "fact_paraphrase-030",
+   "family": "fact_paraphrase",
+   "question": "Camelopardalis was discovered or invented by whom?",
+   "gold": [
+    "Petrus Plancius"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q8832"
+   ],
+   "expect_mpns": [
+    "astronomy"
+   ],
+   "forbid_mpns": [],
+   "prop": "discoverer or inventor"
+  },
+  {
+   "id": "fact_paraphrase-031",
+   "family": "fact_paraphrase",
+   "question": "On what date was Rosalyn Sussman Yalow born?",
+   "gold": [
+    "19 July 1921"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q107402"
+   ],
+   "expect_mpns": [
+    "medicine-health"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of birth"
+  },
+  {
+   "id": "fact_paraphrase-032",
+   "family": "fact_paraphrase",
+   "question": "Thiamine has which chemical formula?",
+   "gold": [
+    "C₁₂H₁₇N₄OS⁺"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q83187"
+   ],
+   "expect_mpns": [
+    "medicine-health"
+   ],
+   "forbid_mpns": [],
+   "prop": "chemical formula"
+  },
+  {
+   "id": "fact_paraphrase-033",
+   "family": "fact_paraphrase",
+   "question": "Methadone has which chemical formula?",
+   "gold": [
+    "C₂₁H₂₇NO"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q179996"
+   ],
+   "expect_mpns": [
+    "medicine-health"
+   ],
+   "forbid_mpns": [],
+   "prop": "chemical formula"
+  },
+  {
+   "id": "fact_paraphrase-034",
+   "family": "fact_paraphrase",
+   "question": "Vaccine takes its name from what?",
+   "gold": [
+    "cow"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q134808"
+   ],
+   "expect_mpns": [
+    "medicine-health"
+   ],
+   "forbid_mpns": [],
+   "prop": "named after"
+  },
+  {
+   "id": "fact_paraphrase-035",
+   "family": "fact_paraphrase",
+   "question": "Oscilloscope was discovered or invented by whom?",
+   "gold": [
+    "Karl Ferdinand Braun"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q174320"
+   ],
+   "expect_mpns": [
+    "physics",
+    "engineering-technology"
+   ],
+   "forbid_mpns": [],
+   "prop": "discoverer or inventor"
+  },
+  {
+   "id": "fact_paraphrase-036",
+   "family": "fact_paraphrase",
+   "question": "Gyroscope was discovered or invented by whom?",
+   "gold": [
+    "Léon Foucault"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q483400"
+   ],
+   "expect_mpns": [
+    "engineering-technology"
+   ],
+   "forbid_mpns": [],
+   "prop": "discoverer or inventor"
+  },
+  {
+   "id": "fact_paraphrase-037",
+   "family": "fact_paraphrase",
+   "question": "Granary started when?",
+   "gold": [
+    "9th millennium BCE"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q114768"
+   ],
+   "expect_mpns": [
+    "engineering-technology"
+   ],
+   "forbid_mpns": [],
+   "prop": "start time"
+  },
+  {
+   "id": "fact_paraphrase-038",
+   "family": "fact_paraphrase",
+   "question": "Charles K. Kao held citizenship of which country?",
+   "gold": [
+    "United Kingdom",
+    "United States"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q16389"
+   ],
+   "expect_mpns": [
+    "engineering-technology"
+   ],
+   "forbid_mpns": [],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "fact_paraphrase-039",
+   "family": "fact_paraphrase",
+   "question": "Mohenjo-daro started when?",
+   "gold": [
+    "25th century BCE"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q5725"
+   ],
+   "expect_mpns": [
+    "history",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "prop": "start time"
+  },
+  {
+   "id": "fact_paraphrase-040",
+   "family": "fact_paraphrase",
+   "question": "First Sino-Japanese War started when?",
+   "gold": [
+    "1 August 1894"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q178687"
+   ],
+   "expect_mpns": [
+    "history",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "prop": "start time"
+  },
+  {
+   "id": "fact_paraphrase-041",
+   "family": "fact_paraphrase",
+   "question": "Klemens von Metternich died when?",
+   "gold": [
+    "11 June 1859"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q45662"
+   ],
+   "expect_mpns": [
+    "history"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of death"
+  },
+  {
+   "id": "fact_paraphrase-042",
+   "family": "fact_paraphrase",
+   "question": "On what date was Rafael Trujillo born?",
+   "gold": [
+    "24 October 1891"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q152474"
+   ],
+   "expect_mpns": [
+    "history"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of birth"
+  },
+  {
+   "id": "fact_paraphrase-043",
+   "family": "fact_paraphrase",
+   "question": "Ahmedabad is located in which country?",
+   "gold": [
+    "India"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q1070"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "prop": "country"
+  },
+  {
+   "id": "fact_paraphrase-044",
+   "family": "fact_paraphrase",
+   "question": "Santiago has which official language?",
+   "gold": [
+    "Spanish"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q2887"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "prop": "official language"
+  },
+  {
+   "id": "fact_paraphrase-045",
+   "family": "fact_paraphrase",
+   "question": "Grand Canyon is located in which country?",
+   "gold": [
+    "United States"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q118841"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "prop": "country"
+  },
+  {
+   "id": "fact_paraphrase-046",
+   "family": "fact_paraphrase",
+   "question": "Réunion is located in which country?",
+   "gold": [
+    "France"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q17070"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "prop": "country"
+  },
+  {
+   "id": "fact_paraphrase-047",
+   "family": "fact_paraphrase",
+   "question": "When did Ferrari come into being?",
+   "gold": [
+    "12 March 1947"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q27586"
+   ],
+   "expect_mpns": [
+    "economics-business",
+    "everyday-life"
+   ],
+   "forbid_mpns": [],
+   "prop": "inception"
+  },
+  {
+   "id": "fact_paraphrase-048",
+   "family": "fact_paraphrase",
+   "question": "Mukesh Ambani held citizenship of which country?",
+   "gold": [
+    "India"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q298547"
+   ],
+   "expect_mpns": [
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "fact_paraphrase-049",
+   "family": "fact_paraphrase",
+   "question": "Jimmy Wales held citizenship of which country?",
+   "gold": [
+    "United States",
+    "United Kingdom"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q181"
+   ],
+   "expect_mpns": [
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "fact_paraphrase-050",
+   "family": "fact_paraphrase",
+   "question": "When did BMW come into being?",
+   "gold": [
+    "7 March 1916"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q26678"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "prop": "inception"
+  },
+  {
+   "id": "fact_paraphrase-051",
+   "family": "fact_paraphrase",
+   "question": "Jeffrey Dahmer held citizenship of which country?",
+   "gold": [
+    "United States"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q298364"
+   ],
+   "expect_mpns": [
+    "civics-law"
+   ],
+   "forbid_mpns": [],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "fact_paraphrase-052",
+   "family": "fact_paraphrase",
+   "question": "When did Chinese Communist Party come into being?",
+   "gold": [
+    "23 July 1921"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q17427"
+   ],
+   "expect_mpns": [
+    "history",
+    "civics-law"
+   ],
+   "forbid_mpns": [],
+   "prop": "inception"
+  },
+  {
+   "id": "fact_paraphrase-053",
+   "family": "fact_paraphrase",
+   "question": "On what date was Charles Manson born?",
+   "gold": [
+    "12 November 1934"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q485508"
+   ],
+   "expect_mpns": [
+    "civics-law"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of birth"
+  },
+  {
+   "id": "fact_paraphrase-054",
+   "family": "fact_paraphrase",
+   "question": "Ernst Kaltenbrunner died when?",
+   "gold": [
+    "16 October 1946"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q78473"
+   ],
+   "expect_mpns": [
+    "civics-law"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of death"
+  },
+  {
+   "id": "fact_paraphrase-055",
+   "family": "fact_paraphrase",
+   "question": "On what date was Frantz Fanon born?",
+   "gold": [
+    "20 July 1925"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q193670"
+   ],
+   "expect_mpns": [
+    "philosophy-religion"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of birth"
+  },
+  {
+   "id": "fact_paraphrase-056",
+   "family": "fact_paraphrase",
+   "question": "David Hume held citizenship of which country?",
+   "gold": [
+    "Kingdom of Great Britain"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q37160"
+   ],
+   "expect_mpns": [
+    "philosophy-religion"
+   ],
+   "forbid_mpns": [],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "fact_paraphrase-057",
+   "family": "fact_paraphrase",
+   "question": "When did Sikhism come into being?",
+   "gold": [
+    "1469"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q9316"
+   ],
+   "expect_mpns": [
+    "philosophy-religion"
+   ],
+   "forbid_mpns": [],
+   "prop": "inception"
+  },
+  {
+   "id": "fact_paraphrase-058",
+   "family": "fact_paraphrase",
+   "question": "On what date was Carl Jung born?",
+   "gold": [
+    "26 July 1875"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q41532"
+   ],
+   "expect_mpns": [
+    "psychology-society"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of birth"
+  },
+  {
+   "id": "fact_paraphrase-059",
+   "family": "fact_paraphrase",
+   "question": "When did Indian Institutes of Technology come into being?",
+   "gold": [
+    "15 September 1956"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q622358"
+   ],
+   "expect_mpns": [
+    "psychology-society"
+   ],
+   "forbid_mpns": [],
+   "prop": "inception"
+  },
+  {
+   "id": "fact_paraphrase-060",
+   "family": "fact_paraphrase",
+   "question": "When did ETH Zurich come into being?",
+   "gold": [
+    "16 October 1855"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q11942"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "psychology-society"
+   ],
+   "forbid_mpns": [],
+   "prop": "inception"
+  },
+  {
+   "id": "fact_paraphrase-061",
+   "family": "fact_paraphrase",
+   "question": "On what date did Clifford Geertz die?",
+   "gold": [
+    "30 October 2006"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q310956"
+   ],
+   "expect_mpns": [
+    "psychology-society"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of death"
+  },
+  {
+   "id": "fact_paraphrase-062",
+   "family": "fact_paraphrase",
+   "question": "Edvard Munch held citizenship of which country?",
+   "gold": [
+    "Norway"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q41406"
+   ],
+   "expect_mpns": [
+    "arts-literature-music"
+   ],
+   "forbid_mpns": [],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "fact_paraphrase-063",
+   "family": "fact_paraphrase",
+   "question": "Johannes Brahms died when?",
+   "gold": [
+    "3 April 1897"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q7294"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "arts-literature-music"
+   ],
+   "forbid_mpns": [],
+   "prop": "date of death"
+  },
+  {
+   "id": "fact_paraphrase-064",
+   "family": "fact_paraphrase",
+   "question": "Sesame Street started when?",
+   "gold": [
+    "10 November 1969"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q155629"
+   ],
+   "expect_mpns": [
+    "arts-literature-music"
+   ],
+   "forbid_mpns": [],
+   "prop": "start time"
+  },
+  {
+   "id": "canary_paraphrase-001",
+   "family": "canary_paraphrase",
+   "question": "Regarding River Kesisteph, what is its mouth?",
+   "gold": [
+    "Ilava Sea"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:68"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "mouth"
+  },
+  {
+   "id": "canary_paraphrase-002",
+   "family": "canary_paraphrase",
+   "question": "Tell me the source of River Lomadz.",
+   "gold": [
+    "Mount Oreth"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:61"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "source"
+  },
+  {
+   "id": "canary_paraphrase-003",
+   "family": "canary_paraphrase",
+   "question": "Regarding Kesoli Festival, what is its year first held?",
+   "gold": [
+    "1525"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:135"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "year first held"
+  },
+  {
+   "id": "canary_paraphrase-004",
+   "family": "canary_paraphrase",
+   "question": "Regarding Yarurnane Festival, what is its duration in days?",
+   "gold": [
+    "10"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:151"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "duration in days"
+  },
+  {
+   "id": "canary_paraphrase-005",
+   "family": "canary_paraphrase",
+   "question": "Regarding River Druiraoli, what is its number of bridges?",
+   "gold": [
+    "15"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:62"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "number of bridges"
+  },
+  {
+   "id": "canary_paraphrase-006",
+   "family": "canary_paraphrase",
+   "question": "Regarding River Ostmareck, what is its number of bridges?",
+   "gold": [
+    "73"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:55"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "number of bridges"
+  },
+  {
+   "id": "canary_paraphrase-007",
+   "family": "canary_paraphrase",
+   "question": "Regarding Velurnoskite, what is its year first described?",
+   "gold": [
+    "1964"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:83"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "year first described"
+  },
+  {
+   "id": "canary_paraphrase-008",
+   "family": "canary_paraphrase",
+   "question": "Tell me the founder of Velughorv Institute.",
+   "gold": [
+    "Liesl Nymmar"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:9"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "founder"
+  },
+  {
+   "id": "canary_paraphrase-009",
+   "family": "canary_paraphrase",
+   "question": "Tell me the first described by of Sareckite.",
+   "gold": [
+    "Ximena Tevoliosk"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:93"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "first described by"
+  },
+  {
+   "id": "canary_paraphrase-010",
+   "family": "canary_paraphrase",
+   "question": "Regarding Ostondoli Festival, what is its year first held?",
+   "gold": [
+    "1342"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:138"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "year first held"
+  },
+  {
+   "id": "canary_paraphrase-011",
+   "family": "canary_paraphrase",
+   "question": "Tell me the founding year of Gwioskuma Institute.",
+   "gold": [
+    "1724"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:11"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "founding year"
+  },
+  {
+   "id": "canary_paraphrase-012",
+   "family": "canary_paraphrase",
+   "question": "Tell me the first charted by of River Ilorveph.",
+   "gold": [
+    "Yvaine Yarond"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:47"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "first charted by"
+  },
+  {
+   "id": "canary_paraphrase-013",
+   "family": "canary_paraphrase",
+   "question": "Tell me the number of bridges of River Druondond.",
+   "gold": [
+    "11"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:57"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "number of bridges"
+  },
+  {
+   "id": "canary_paraphrase-014",
+   "family": "canary_paraphrase",
+   "question": "Regarding Ostmarurnite, what is its main locality?",
+   "gold": [
+    "Lake Keseckorv"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:104"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "main locality"
+  },
+  {
+   "id": "canary_paraphrase-015",
+   "family": "canary_paraphrase",
+   "question": "Tell me the month held of Ilavaosk Festival.",
+   "gold": [
+    "November"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:133"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "month held"
+  },
+  {
+   "id": "canary_paraphrase-016",
+   "family": "canary_paraphrase",
+   "question": "Tell me the research field of Quoond Institute.",
+   "gold": [
+    "clockwork repair"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:7"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "research field"
+  },
+  {
+   "id": "canary_paraphrase-017",
+   "family": "canary_paraphrase",
+   "question": "Regarding River Ushistmar, what is its source?",
+   "gold": [
+    "Mount Nymix"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:72"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "source"
+  },
+  {
+   "id": "canary_paraphrase-018",
+   "family": "canary_paraphrase",
+   "question": "Tell me the length in kilometres of River Nymeph.",
+   "gold": [
+    "1536"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:42"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "length in kilometres"
+  },
+  {
+   "id": "canary_paraphrase-019",
+   "family": "canary_paraphrase",
+   "question": "Regarding Effavaemn Festival, what is its duration in days?",
+   "gold": [
+    "24"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:127"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "duration in days"
+  },
+  {
+   "id": "canary_paraphrase-020",
+   "family": "canary_paraphrase",
+   "question": "Regarding Kesiraist Festival, what is its town?",
+   "gold": [
+    "Yarane"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:134"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "town"
+  },
+  {
+   "id": "canary_paraphrase-021",
+   "family": "canary_paraphrase",
+   "question": "Tell me the research field of Tameckaro Institute.",
+   "gold": [
+    "clockwork repair"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:17"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "research field"
+  },
+  {
+   "id": "canary_paraphrase-022",
+   "family": "canary_paraphrase",
+   "question": "Tell me the first described by of Braadzoskite.",
+   "gold": [
+    "Liesl Sarurn"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:99"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "first described by"
+  },
+  {
+   "id": "canary_paraphrase-023",
+   "family": "canary_paraphrase",
+   "question": "Tell me the source of River Ostistoli.",
+   "gold": [
+    "Mount Sarava"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:78"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "source"
+  },
+  {
+   "id": "canary_paraphrase-024",
+   "family": "canary_paraphrase",
+   "question": "Regarding River Tamira, what is its number of bridges?",
+   "gold": [
+    "79"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:65"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "number of bridges"
+  },
+  {
+   "id": "canary_paraphrase-025",
+   "family": "canary_paraphrase",
+   "question": "Tell me the source of River Ilethane.",
+   "gold": [
+    "Mount Ostepheth"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:63"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "source"
+  },
+  {
+   "id": "canary_paraphrase-026",
+   "family": "canary_paraphrase",
+   "question": "Regarding Huleph Institute, what is its founder?",
+   "gold": [
+    "Hollis Iluma"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:5"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "founder"
+  },
+  {
+   "id": "canary_paraphrase-027",
+   "family": "canary_paraphrase",
+   "question": "Tell me the town of Hulix Festival.",
+   "gold": [
+    "Hulondeth"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:131"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "town"
+  },
+  {
+   "id": "canary_paraphrase-028",
+   "family": "canary_paraphrase",
+   "question": "Regarding Orepholi Festival, what is its town?",
+   "gold": [
+    "Kesuma"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:144"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "town"
+  },
+  {
+   "id": "canary_paraphrase-029",
+   "family": "canary_paraphrase",
+   "question": "Tell me the first charted by of River Zenarooli.",
+   "gold": [
+    "Bram Effondix"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:58"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "first charted by"
+  },
+  {
+   "id": "canary_paraphrase-030",
+   "family": "canary_paraphrase",
+   "question": "Tell me the town of Nymugheph Festival.",
+   "gold": [
+    "Ostemnava"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:147"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "town"
+  },
+  {
+   "id": "canary_paraphrase-031",
+   "family": "canary_paraphrase",
+   "question": "Tell me the founder of Tamist Institute.",
+   "gold": [
+    "Ilse Pirix"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:21"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "founder"
+  },
+  {
+   "id": "canary_paraphrase-032",
+   "family": "canary_paraphrase",
+   "question": "Regarding Druadzite, what is its colour?",
+   "gold": [
+    "slate green"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:86"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "colour"
+  },
+  {
+   "id": "canary_paraphrase-033",
+   "family": "canary_paraphrase",
+   "question": "Regarding Saristite, what is its year first described?",
+   "gold": [
+    "1861"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:117"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "year first described"
+  },
+  {
+   "id": "canary_paraphrase-034",
+   "family": "canary_paraphrase",
+   "question": "Regarding Pirurn Institute, what is its number of researchers?",
+   "gold": [
+    "781"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:28"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "number of researchers"
+  },
+  {
+   "id": "canary_paraphrase-035",
+   "family": "canary_paraphrase",
+   "question": "Regarding River Nymemn, what is its mouth?",
+   "gold": [
+    "Huleth Sea"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:75"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "mouth"
+  },
+  {
+   "id": "canary_paraphrase-036",
+   "family": "canary_paraphrase",
+   "question": "Tell me the town of Effeph Institute.",
+   "gold": [
+    "Usheckurn"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:26"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "town"
+  },
+  {
+   "id": "canary_paraphrase-037",
+   "family": "canary_paraphrase",
+   "question": "Regarding Druoskorvite, what is its first described by?",
+   "gold": [
+    "Maud Ostmaradz"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:112"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "first described by"
+  },
+  {
+   "id": "canary_paraphrase-038",
+   "family": "canary_paraphrase",
+   "question": "Regarding Hulumaistite, what is its main locality?",
+   "gold": [
+    "Lake Quoaroix"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:82"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "main locality"
+  },
+  {
+   "id": "canary_paraphrase-039",
+   "family": "canary_paraphrase",
+   "question": "Regarding River Hulughuma, what is its mouth?",
+   "gold": [
+    "Ushiltosk Sea"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:71"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "mouth"
+  },
+  {
+   "id": "canary_paraphrase-040",
+   "family": "canary_paraphrase",
+   "question": "Tell me the research field of Druira Institute.",
+   "gold": [
+    "moth migration"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:31"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "research field"
+  },
+  {
+   "id": "canary_statement-001",
+   "family": "canary_statement",
+   "question": "How many researchers does the Tameph Institute employ?",
+   "gold": [
+    "406"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:23"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "number of researchers"
+  },
+  {
+   "id": "canary_statement-002",
+   "family": "canary_statement",
+   "question": "In which town does the Ilisteck Festival take place?",
+   "gold": [
+    "Druemn"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:143"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "town"
+  },
+  {
+   "id": "canary_statement-003",
+   "family": "canary_statement",
+   "question": "On which mountain does the River Oreck rise?",
+   "gold": [
+    "Mount Lomuma"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:69"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "source"
+  },
+  {
+   "id": "canary_statement-004",
+   "family": "canary_statement",
+   "question": "How many bridges cross the River Velughosk?",
+   "gold": [
+    "52"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:43"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "number of bridges"
+  },
+  {
+   "id": "canary_statement-005",
+   "family": "canary_statement",
+   "question": "Near which place is Braadzoskite mainly found?",
+   "gold": [
+    "Lake Pireck"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:99"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "main locality"
+  },
+  {
+   "id": "canary_statement-006",
+   "family": "canary_statement",
+   "question": "Which town hosts the Velughorv Institute?",
+   "gold": [
+    "Tamemn"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:9"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "town"
+  },
+  {
+   "id": "canary_statement-007",
+   "family": "canary_statement",
+   "question": "How many kilometres long is the River Ilethane?",
+   "gold": [
+    "264"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:63"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "length in kilometres"
+  },
+  {
+   "id": "canary_statement-008",
+   "family": "canary_statement",
+   "question": "In which year was the Quoepheth Institute founded?",
+   "gold": [
+    "1805"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:12"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "founding year"
+  },
+  {
+   "id": "canary_statement-009",
+   "family": "canary_statement",
+   "question": "On which mountain does the River Orolioli rise?",
+   "gold": [
+    "Mount Saroli"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:52"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "source"
+  },
+  {
+   "id": "canary_statement-010",
+   "family": "canary_statement",
+   "question": "What colour is Sareckite?",
+   "gold": [
+    "bone white"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:93"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "colour"
+  },
+  {
+   "id": "canary_statement-011",
+   "family": "canary_statement",
+   "question": "Who first described Orephurnite?",
+   "gold": [
+    "Ilse Braeckadz"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:89"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "first described by"
+  },
+  {
+   "id": "canary_statement-012",
+   "family": "canary_statement",
+   "question": "Who first charted the River Yarira?",
+   "gold": [
+    "Tobiah Braurnmar"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:50"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "first charted by"
+  },
+  {
+   "id": "canary_statement-013",
+   "family": "canary_statement",
+   "question": "In which year was Druadziltite first described?",
+   "gold": [
+    "1840"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:100"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "year first described"
+  },
+  {
+   "id": "canary_statement-014",
+   "family": "canary_statement",
+   "question": "Which town hosts the Gwioskuma Institute?",
+   "gold": [
+    "Effmar"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:11"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "town"
+  },
+  {
+   "id": "canary_statement-015",
+   "family": "canary_statement",
+   "question": "How hard is Lomemnorvite on the Mohs scale?",
+   "gold": [
+    "5.5"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:118"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "Mohs hardness"
+  },
+  {
+   "id": "canary_statement-016",
+   "family": "canary_statement",
+   "question": "How hard is Druoskorvite on the Mohs scale?",
+   "gold": [
+    "6"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:112"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "Mohs hardness"
+  },
+  {
+   "id": "canary_statement-017",
+   "family": "canary_statement",
+   "question": "On which mountain does the River Hulughuma rise?",
+   "gold": [
+    "Mount Lomeph"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:71"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "source"
+  },
+  {
+   "id": "canary_statement-018",
+   "family": "canary_statement",
+   "question": "Who first described Kesavaondite?",
+   "gold": [
+    "Radek Ilaro"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:85"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "first described by"
+  },
+  {
+   "id": "canary_statement-019",
+   "family": "canary_statement",
+   "question": "In which month is the Ushemnemn Festival held?",
+   "gold": [
+    "March"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:129"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "month held"
+  },
+  {
+   "id": "canary_statement-020",
+   "family": "canary_statement",
+   "question": "How many researchers does the Huloskeph Institute employ?",
+   "gold": [
+    "104"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:canary:20261111:14"
+   ],
+   "expect_mpns": [
+    "diagnostic-canary"
+   ],
+   "forbid_mpns": [],
+   "prop": "number of researchers"
+  },
+  {
+   "id": "two_hop-001",
+   "family": "two_hop",
+   "question": "What is the continent of the place of birth of Pierre Curie?",
+   "gold": [
+    "Europe"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q37463",
+    "yaob:wd:Q90"
+   ],
+   "expect_mpns": [
+    "physics",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "via": "born_in",
+   "prop": "continent",
+   "bridge": "Paris"
+  },
+  {
+   "id": "two_hop-002",
+   "family": "two_hop",
+   "question": "What is the country of the place of death of Wilhelm Röntgen?",
+   "gold": [
+    "Germany"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q35149",
+    "yaob:wd:Q1726"
+   ],
+   "expect_mpns": [
+    "physics",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "via": "died_in",
+   "prop": "country",
+   "bridge": "Munich"
+  },
+  {
+   "id": "two_hop-003",
+   "family": "two_hop",
+   "question": "What is the population of the place of death of Cyril of Alexandria?",
+   "gold": [
+    "5,362,517"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q44079",
+    "yaob:wd:Q87"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "philosophy-religion"
+   ],
+   "forbid_mpns": [],
+   "via": "died_in",
+   "prop": "population",
+   "bridge": "Alexandria"
+  },
+  {
+   "id": "two_hop-004",
+   "family": "two_hop",
+   "question": "What is the country of the country of citizenship of Ludwig Boltzmann?",
+   "gold": [
+    "Austria–Hungary"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q84296",
+    "yaob:wd:Q28513"
+   ],
+   "expect_mpns": [
+    "physics",
+    "history"
+   ],
+   "forbid_mpns": [],
+   "via": "citizen_of",
+   "prop": "country",
+   "bridge": "Austria-Hungary"
+  },
+  {
+   "id": "two_hop-005",
+   "family": "two_hop",
+   "question": "What is the area of the country of HSBC?",
+   "gold": [
+    "242,495 square kilometre"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q190464",
+    "yaob:wd:Q145"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "via": "country",
+   "prop": "area",
+   "bridge": "United Kingdom"
+  },
+  {
+   "id": "two_hop-006",
+   "family": "two_hop",
+   "question": "What is the currency of the country of Metro-Goldwyn-Mayer?",
+   "gold": [
+    "United States dollar"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q179200",
+    "yaob:wd:Q30"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "via": "country",
+   "prop": "currency",
+   "bridge": "United States"
+  },
+  {
+   "id": "two_hop-007",
+   "family": "two_hop",
+   "question": "What is the capital of the country of University of Bologna?",
+   "gold": [
+    "Rome"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q131262",
+    "yaob:wd:Q38"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "psychology-society"
+   ],
+   "forbid_mpns": [],
+   "via": "country",
+   "prop": "capital",
+   "bridge": "Italy"
+  },
+  {
+   "id": "two_hop-008",
+   "family": "two_hop",
+   "question": "What is the capital of the country of citizenship of Honoré de Balzac?",
+   "gold": [
+    "Paris"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q9711",
+    "yaob:wd:Q142"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "arts-literature-music"
+   ],
+   "forbid_mpns": [],
+   "via": "citizen_of",
+   "prop": "capital",
+   "bridge": "France"
+  },
+  {
+   "id": "two_hop-009",
+   "family": "two_hop",
+   "question": "What is the inception of the country of citizenship of Guillaume de l'Hôpital?",
+   "gold": [
+    "987"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q202279",
+    "yaob:wd:Q70972"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics",
+    "history"
+   ],
+   "forbid_mpns": [],
+   "via": "citizen_of",
+   "prop": "inception",
+   "bridge": "Kingdom of France"
+  },
+  {
+   "id": "two_hop-010",
+   "family": "two_hop",
+   "question": "What is the inception of the country of citizenship of Porfirio Díaz?",
+   "gold": [
+    "16 September 1810"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q150688",
+    "yaob:wd:Q96"
+   ],
+   "expect_mpns": [
+    "history",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "via": "citizen_of",
+   "prop": "inception",
+   "bridge": "Mexico"
+  },
+  {
+   "id": "two_hop-011",
+   "family": "two_hop",
+   "question": "What is the population of the place of death of Abu Bakr?",
+   "gold": [
+    "1,411,599"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q334923",
+    "yaob:wd:Q35484"
+   ],
+   "expect_mpns": [
+    "history",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "via": "died_in",
+   "prop": "population",
+   "bridge": "Medina"
+  },
+  {
+   "id": "two_hop-012",
+   "family": "two_hop",
+   "question": "What is the population of the country of Deutsche Bahn?",
+   "gold": [
+    "83,467,117"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q9322",
+    "yaob:wd:Q183"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "via": "country",
+   "prop": "population",
+   "bridge": "Germany"
+  },
+  {
+   "id": "two_hop-013",
+   "family": "two_hop",
+   "question": "What is the population of the place of birth of Felix Klein?",
+   "gold": [
+    "619,444"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q76641",
+    "yaob:wd:Q1718"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "via": "born_in",
+   "prop": "population",
+   "bridge": "Düsseldorf"
+  },
+  {
+   "id": "two_hop-014",
+   "family": "two_hop",
+   "question": "What is the area of the place of death of Arthur C. Clarke?",
+   "gold": [
+    "37,321,728 square metre"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q47087",
+    "yaob:wd:Q35381"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "arts-literature-music"
+   ],
+   "forbid_mpns": [],
+   "via": "died_in",
+   "prop": "area",
+   "bridge": "Colombo"
+  },
+  {
+   "id": "two_hop-015",
+   "family": "two_hop",
+   "question": "What is the continent of the containing region of Yakut language?",
+   "gold": [
+    "Asia"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q34299",
+    "yaob:wd:Q6605"
+   ],
+   "expect_mpns": [
+    "language-linguistics",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "via": "located_in",
+   "prop": "continent",
+   "bridge": "Sakha Republic"
+  },
+  {
+   "id": "two_hop-016",
+   "family": "two_hop",
+   "question": "What is the inception of the country of Christ the Redeemer (statue)?",
+   "gold": [
+    "7 September 1822"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q79961",
+    "yaob:wd:Q155"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "arts-literature-music"
+   ],
+   "forbid_mpns": [],
+   "via": "country",
+   "prop": "inception",
+   "bridge": "Brazil"
+  },
+  {
+   "id": "two_hop-017",
+   "family": "two_hop",
+   "question": "What is the official language of the country of Theravada?",
+   "gold": [
+    "Khmer"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q132265",
+    "yaob:wd:Q424"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "philosophy-religion"
+   ],
+   "forbid_mpns": [],
+   "via": "country",
+   "prop": "official language",
+   "bridge": "Cambodia"
+  },
+  {
+   "id": "two_hop-018",
+   "family": "two_hop",
+   "question": "What is the population of the place of death of Jan Tinbergen?",
+   "gold": [
+    "548,320"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q183181",
+    "yaob:wd:Q36600"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "via": "died_in",
+   "prop": "population",
+   "bridge": "The Hague"
+  },
+  {
+   "id": "two_hop-019",
+   "family": "two_hop",
+   "question": "What is the continent of the country of citizenship of Saint George?",
+   "gold": [
+    "Afro-Eurasia"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q48438",
+    "yaob:wd:Q1747689"
+   ],
+   "expect_mpns": [
+    "history",
+    "philosophy-religion"
+   ],
+   "forbid_mpns": [],
+   "via": "citizen_of",
+   "prop": "continent",
+   "bridge": "Ancient Rome"
+  },
+  {
+   "id": "two_hop-020",
+   "family": "two_hop",
+   "question": "What is the currency of the country of World War I?",
+   "gold": [
+    "renminbi"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q361",
+    "yaob:wd:Q148"
+   ],
+   "expect_mpns": [
+    "history",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "via": "country",
+   "prop": "currency",
+   "bridge": "China"
+  },
+  {
+   "id": "two_hop-021",
+   "family": "two_hop",
+   "question": "What is the capital of the country of Canadian dollar?",
+   "gold": [
+    "Ottawa"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q1104069",
+    "yaob:wd:Q16"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "via": "country",
+   "prop": "capital",
+   "bridge": "Canada"
+  },
+  {
+   "id": "two_hop-022",
+   "family": "two_hop",
+   "question": "What is the area of the namesake of Alpine skiing?",
+   "gold": [
+    "190,000 square kilometre"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q186222",
+    "yaob:wd:Q1286"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "everyday-life"
+   ],
+   "forbid_mpns": [],
+   "via": "named_after",
+   "prop": "area",
+   "bridge": "Alps"
+  },
+  {
+   "id": "two_hop-023",
+   "family": "two_hop",
+   "question": "What is the date of birth of the author of United States Declaration of Independence?",
+   "gold": [
+    "2 April 1743"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q127912",
+    "yaob:wd:Q11812"
+   ],
+   "expect_mpns": [
+    "history",
+    "civics-law"
+   ],
+   "forbid_mpns": [],
+   "via": "author",
+   "prop": "date of birth",
+   "bridge": "Thomas Jefferson"
+  },
+  {
+   "id": "two_hop-024",
+   "family": "two_hop",
+   "question": "What is the area of the place of birth of David Lloyd George?",
+   "gold": [
+    "115.6 square kilometre"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q134982",
+    "yaob:wd:Q18125"
+   ],
+   "expect_mpns": [
+    "history",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "via": "born_in",
+   "prop": "area",
+   "bridge": "Manchester"
+  },
+  {
+   "id": "two_hop-025",
+   "family": "two_hop",
+   "question": "What is the population of the place of birth of Mark Antony?",
+   "gold": [
+    "2,748,109"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q51673",
+    "yaob:wd:Q220"
+   ],
+   "expect_mpns": [
+    "history",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "via": "born_in",
+   "prop": "population",
+   "bridge": "Rome"
+  },
+  {
+   "id": "two_hop-026",
+   "family": "two_hop",
+   "question": "What is the country of the place of death of Howard Hughes?",
+   "gold": [
+    "United States"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q189081",
+    "yaob:wd:Q16555"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "via": "died_in",
+   "prop": "country",
+   "bridge": "Houston"
+  },
+  {
+   "id": "two_hop-027",
+   "family": "two_hop",
+   "question": "What is the continent of the country of Pope?",
+   "gold": [
+    "Europe"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q19546",
+    "yaob:wd:Q237"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "philosophy-religion"
+   ],
+   "forbid_mpns": [],
+   "via": "country",
+   "prop": "continent",
+   "bridge": "Vatican City"
+  },
+  {
+   "id": "two_hop-028",
+   "family": "two_hop",
+   "question": "What is the official language of the country of Valley of the Kings?",
+   "gold": [
+    "Arabic"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q133423",
+    "yaob:wd:Q79"
+   ],
+   "expect_mpns": [
+    "history",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "via": "country",
+   "prop": "official language",
+   "bridge": "Egypt"
+  },
+  {
+   "id": "two_hop-029",
+   "family": "two_hop",
+   "question": "What is the population of the place of death of Dmitri Shostakovich?",
+   "gold": [
+    "13,274,285"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q80135",
+    "yaob:wd:Q649"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "arts-literature-music"
+   ],
+   "forbid_mpns": [],
+   "via": "died_in",
+   "prop": "population",
+   "bridge": "Moscow"
+  },
+  {
+   "id": "two_hop-030",
+   "family": "two_hop",
+   "question": "What is the population of the place of death of Ingrid Bergman?",
+   "gold": [
+    "8,799,728"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q43247",
+    "yaob:wd:Q84"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "arts-literature-music"
+   ],
+   "forbid_mpns": [],
+   "via": "died_in",
+   "prop": "population",
+   "bridge": "London"
+  },
+  {
+   "id": "procedure-001",
+   "family": "procedure",
+   "question": "What is the greatest common divisor of 252 and 198?",
+   "gold": 18,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.gcd"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.gcd",
+   "args": {
+    "a": 252,
+    "b": 198
+   }
+  },
+  {
+   "id": "procedure-002",
+   "family": "procedure",
+   "question": "What is the least common multiple of 14 and 20?",
+   "gold": 140,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.lcm"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.lcm",
+   "args": {
+    "a": 14,
+    "b": 20
+   }
+  },
+  {
+   "id": "procedure-003",
+   "family": "procedure",
+   "question": "What is the arithmetic mean of 12, 15, 22, 9 and 17?",
+   "gold": 15.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.mean"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.mean",
+   "args": {
+    "values": [
+     12,
+     15,
+     22,
+     9,
+     17
+    ]
+   }
+  },
+  {
+   "id": "procedure-004",
+   "family": "procedure",
+   "question": "What is the median of 41, 7, 19, 88, 23 and 5?",
+   "gold": 21.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.median"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.median",
+   "args": {
+    "values": [
+     41,
+     7,
+     19,
+     88,
+     23,
+     5
+    ]
+   }
+  },
+  {
+   "id": "procedure-005",
+   "family": "procedure",
+   "question": "What is the population standard deviation of 4, 8, 15, 16, 23 and 42?",
+   "gold": 12.3153021346,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.stdev"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.stdev",
+   "args": {
+    "values": [
+     4,
+     8,
+     15,
+     16,
+     23,
+     42
+    ]
+   }
+  },
+  {
+   "id": "procedure-006",
+   "family": "procedure",
+   "question": "In how many ways can 4 items be chosen from 11 when order does not matter?",
+   "gold": 330,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.combinations"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.combinations",
+   "args": {
+    "n": 11,
+    "r": 4
+   }
+  },
+  {
+   "id": "procedure-007",
+   "family": "procedure",
+   "question": "How many ordered arrangements of 3 items can be made from 9 distinct items?",
+   "gold": 504,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.permutations"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.permutations",
+   "args": {
+    "n": 9,
+    "r": 3
+   }
+  },
+  {
+   "id": "procedure-008",
+   "family": "procedure",
+   "question": "A right triangle has legs of 9 and 40. How long is the hypotenuse?",
+   "gold": 41.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.hypotenuse"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.hypotenuse",
+   "args": {
+    "a": 9,
+    "b": 40
+   }
+  },
+  {
+   "id": "procedure-009",
+   "family": "procedure",
+   "question": "What is the area of a triangle with sides 13, 14 and 15?",
+   "gold": 84.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.triangle_area_heron"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.triangle_area_heron",
+   "args": {
+    "a": 13,
+    "b": 14,
+    "c": 15
+   }
+  },
+  {
+   "id": "procedure-010",
+   "family": "procedure",
+   "question": "What is the sum of the first 40 terms of the arithmetic progression starting at 3 with common difference 5?",
+   "gold": 4020.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.arithmetic_series"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.arithmetic_series",
+   "args": {
+    "first": 3,
+    "difference": 5,
+    "n": 40
+   }
+  },
+  {
+   "id": "procedure-011",
+   "family": "procedure",
+   "question": "By what percentage does a value change when it goes from 64 to 80?",
+   "gold": 25.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.percent_change"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.percent_change",
+   "args": {
+    "old": 64,
+    "new": 80
+   }
+  },
+  {
+   "id": "procedure-012",
+   "family": "procedure",
+   "question": "What is the 25th Fibonacci number, counting F(0) = 0 and F(1) = 1?",
+   "gold": 75025,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.fibonacci"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.fibonacci",
+   "args": {
+    "n": 25
+   }
+  },
+  {
+   "id": "procedure-013",
+   "family": "procedure",
+   "question": "What is the probability of exactly 3 successes in 8 independent trials with success probability 0.25?",
+   "gold": 0.2076416016,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:math.binomial_probability"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "math.binomial_probability",
+   "args": {
+    "n": 8,
+    "k": 3,
+    "p": 0.25
+   }
+  },
+  {
+   "id": "procedure-014",
+   "family": "procedure",
+   "question": "What is the kinetic energy in joules of a 1200 kg car moving at 25 metres per second?",
+   "gold": 375000.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:phys.kinetic_energy"
+   ],
+   "expect_mpns": [
+    "physics"
+   ],
+   "forbid_mpns": [],
+   "impl": "phys.kinetic_energy",
+   "args": {
+    "mass_kg": 1200,
+    "speed": 25
+   }
+  },
+  {
+   "id": "procedure-015",
+   "family": "procedure",
+   "question": "What is the equivalent resistance of 12 ohm, 6 ohm and 4 ohm resistors connected in parallel?",
+   "gold": 2.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:phys.resistors"
+   ],
+   "expect_mpns": [
+    "physics"
+   ],
+   "forbid_mpns": [],
+   "impl": "phys.resistors",
+   "args": {
+    "resistances": [
+     12,
+     6,
+     4
+    ],
+    "arrangement": "parallel"
+   }
+  },
+  {
+   "id": "procedure-016",
+   "family": "procedure",
+   "question": "What is the period in seconds of a simple pendulum 2.5 metres long on Earth?",
+   "gold": 3.1724116416,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:phys.pendulum_period"
+   ],
+   "expect_mpns": [
+    "physics"
+   ],
+   "forbid_mpns": [],
+   "impl": "phys.pendulum_period",
+   "args": {
+    "length_m": 2.5
+   }
+  },
+  {
+   "id": "procedure-017",
+   "family": "procedure",
+   "question": "A sample starts with 800 grams and has a half-life of 12 years. How many grams remain after 36 years?",
+   "gold": 100.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:phys.half_life"
+   ],
+   "expect_mpns": [
+    "physics"
+   ],
+   "forbid_mpns": [],
+   "impl": "phys.half_life",
+   "args": {
+    "initial": 800,
+    "half_life": 12,
+    "time": 36
+   }
+  },
+  {
+   "id": "procedure-018",
+   "family": "procedure",
+   "question": "How many joules are needed to warm 3 kg of water by 25 kelvin, taking the specific heat as 4186 J/(kg K)?",
+   "gold": 313950,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:phys.heat"
+   ],
+   "expect_mpns": [
+    "physics"
+   ],
+   "forbid_mpns": [],
+   "impl": "phys.heat",
+   "args": {
+    "mass_kg": 3,
+    "specific_heat": 4186,
+    "delta_t": 25
+   }
+  },
+  {
+   "id": "procedure-019",
+   "family": "procedure",
+   "question": "What is the molar mass of Ca(OH)2 in grams per mole?",
+   "gold": 74.092,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:chem.molar_mass"
+   ],
+   "expect_mpns": [
+    "chemistry"
+   ],
+   "forbid_mpns": [],
+   "impl": "chem.molar_mass",
+   "args": {
+    "formula": "Ca(OH)2"
+   }
+  },
+  {
+   "id": "procedure-020",
+   "family": "procedure",
+   "question": "50 mL of a 3 mol/L solution is diluted to 600 mL. What is the new concentration in mol/L?",
+   "gold": 0.25,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:chem.dilution"
+   ],
+   "expect_mpns": [
+    "chemistry"
+   ],
+   "forbid_mpns": [],
+   "impl": "chem.dilution",
+   "args": {
+    "c1": 3,
+    "v1": 50,
+    "v2": 600
+   }
+  },
+  {
+   "id": "procedure-021",
+   "family": "procedure",
+   "question": "A body orbits the Sun with a semi-major axis of 5.2 astronomical units. What is its orbital period in years?",
+   "gold": 11.857824421,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:astro.kepler_period"
+   ],
+   "expect_mpns": [
+    "astronomy"
+   ],
+   "forbid_mpns": [],
+   "impl": "astro.kepler_period",
+   "args": {
+    "semi_major_axis_au": 5.2
+   }
+  },
+  {
+   "id": "procedure-022",
+   "family": "procedure",
+   "question": "What is the great-circle distance in kilometres between latitude 35.6762, longitude 139.6503 and latitude -33.8688, longitude 151.2093?",
+   "gold": 7825.8294,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:geo.haversine"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [],
+   "impl": "geo.haversine",
+   "args": {
+    "lat1": 35.6762,
+    "lon1": 139.6503,
+    "lat2": -33.8688,
+    "lon2": 151.2093
+   }
+  },
+  {
+   "id": "procedure-023",
+   "family": "procedure",
+   "question": "What is the body mass index of a person who weighs 82 kg and is 1.80 m tall?",
+   "gold": 25.3086419753,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:health.bmi"
+   ],
+   "expect_mpns": [
+    "medicine-health"
+   ],
+   "forbid_mpns": [],
+   "impl": "health.bmi",
+   "args": {
+    "weight_kg": 82,
+    "height_m": 1.8
+   }
+  },
+  {
+   "id": "procedure-024",
+   "family": "procedure",
+   "question": "What is the decimal number 2026 written in hexadecimal?",
+   "gold": "7ea",
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:cs.base_convert"
+   ],
+   "expect_mpns": [
+    "computing-ai"
+   ],
+   "forbid_mpns": [],
+   "impl": "cs.base_convert",
+   "args": {
+    "number": "2026",
+    "from_base": 10,
+    "to_base": 16
+   }
+  },
+  {
+   "id": "procedure-025",
+   "family": "procedure",
+   "question": "What is the Levenshtein distance between the words 'sunday' and 'saturday'?",
+   "gold": 3,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:cs.levenshtein"
+   ],
+   "expect_mpns": [
+    "computing-ai"
+   ],
+   "forbid_mpns": [],
+   "impl": "cs.levenshtein",
+   "args": {
+    "a": "sunday",
+    "b": "saturday"
+   }
+  },
+  {
+   "id": "procedure-026",
+   "family": "procedure",
+   "question": "How many usable host addresses does an IPv4 /22 subnet have?",
+   "gold": 1022,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:cs.subnet_hosts"
+   ],
+   "expect_mpns": [
+    "computing-ai"
+   ],
+   "forbid_mpns": [],
+   "impl": "cs.subnet_hosts",
+   "args": {
+    "prefix_length": 22
+   }
+  },
+  {
+   "id": "procedure-027",
+   "family": "procedure",
+   "question": "What is 4,000 worth after 7 years at 5 percent annual interest compounded quarterly?",
+   "gold": 5663.9692,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:econ.compound_interest"
+   ],
+   "expect_mpns": [
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "impl": "econ.compound_interest",
+   "args": {
+    "principal": 4000,
+    "annual_rate_percent": 5,
+    "years": 7,
+    "compounds_per_year": 4
+   }
+  },
+  {
+   "id": "procedure-028",
+   "family": "procedure",
+   "question": "What is the monthly payment on a 150,000 loan over 20 years at 4.5 percent annual interest?",
+   "gold": 948.9741,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:econ.loan_payment"
+   ],
+   "expect_mpns": [
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "impl": "econ.loan_payment",
+   "args": {
+    "principal": 150000,
+    "annual_rate_percent": 4.5,
+    "years": 20,
+    "payments_per_year": 12
+   }
+  },
+  {
+   "id": "procedure-029",
+   "family": "procedure",
+   "question": "Fixed costs are 18,000, the price per unit is 45 and the variable cost per unit is 27. How many units must be sold to break even?",
+   "gold": 1000.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:econ.break_even"
+   ],
+   "expect_mpns": [
+    "economics-business"
+   ],
+   "forbid_mpns": [],
+   "impl": "econ.break_even",
+   "args": {
+    "fixed_costs": 18000,
+    "price_per_unit": 45,
+    "variable_cost_per_unit": 27
+   }
+  },
+  {
+   "id": "procedure-030",
+   "family": "procedure",
+   "question": "What is 98.6 degrees Fahrenheit in Celsius?",
+   "gold": 37.0,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:units.temperature"
+   ],
+   "expect_mpns": [
+    "everyday-life"
+   ],
+   "forbid_mpns": [],
+   "impl": "units.temperature",
+   "args": {
+    "value": 98.6,
+    "from_unit": "f",
+    "to_unit": "c"
+   }
+  },
+  {
+   "id": "procedure-031",
+   "family": "procedure",
+   "question": "How many kilometres are 26.2 miles?",
+   "gold": 42.1648128,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:units.length"
+   ],
+   "expect_mpns": [
+    "everyday-life"
+   ],
+   "forbid_mpns": [],
+   "impl": "units.length",
+   "args": {
+    "value": 26.2,
+    "from_unit": "mile",
+    "to_unit": "km"
+   }
+  },
+  {
+   "id": "procedure-032",
+   "family": "procedure",
+   "question": "What day of the week was 20 July 1969?",
+   "gold": "Sunday",
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:date.day_of_week"
+   ],
+   "expect_mpns": [
+    "everyday-life"
+   ],
+   "forbid_mpns": [],
+   "impl": "date.day_of_week",
+   "args": {
+    "date": "1969-07-20"
+   }
+  },
+  {
+   "id": "procedure-033",
+   "family": "procedure",
+   "question": "How many days are there from 1 March 2024 to 25 December 2024?",
+   "gold": 299,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:date.days_between"
+   ],
+   "expect_mpns": [
+    "everyday-life"
+   ],
+   "forbid_mpns": [],
+   "impl": "date.days_between",
+   "args": {
+    "start": "2024-03-01",
+    "end": "2024-12-25"
+   }
+  },
+  {
+   "id": "procedure-034",
+   "family": "procedure",
+   "question": "How is the number 2026 written in Roman numerals?",
+   "gold": "MMXXVI",
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:lang.to_roman"
+   ],
+   "expect_mpns": [
+    "language-linguistics"
+   ],
+   "forbid_mpns": [],
+   "impl": "lang.to_roman",
+   "args": {
+    "n": 2026
+   }
+  },
+  {
+   "id": "procedure-035",
+   "family": "procedure",
+   "question": "Four parties receive 340,000, 280,000, 160,000 and 60,000 votes. How are 7 seats allocated by the D'Hondt method?",
+   "gold": [
+    3,
+    3,
+    1,
+    0
+   ],
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:civics.dhondt"
+   ],
+   "expect_mpns": [
+    "civics-law"
+   ],
+   "forbid_mpns": [],
+   "impl": "civics.dhondt",
+   "args": {
+    "votes": [
+     340000,
+     280000,
+     160000,
+     60000
+    ],
+    "seats": 7
+   }
+  },
+  {
+   "id": "procedure-036",
+   "family": "procedure",
+   "question": "What is the frequency in hertz of the note E4 in equal temperament with A4 at 440 Hz?",
+   "gold": 329.6275569129,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:music.note_frequency"
+   ],
+   "expect_mpns": [
+    "arts-literature-music"
+   ],
+   "forbid_mpns": [],
+   "impl": "music.note_frequency",
+   "args": {
+    "note": "E4"
+   }
+  },
+  {
+   "id": "procedure-037",
+   "family": "procedure",
+   "question": "Is this argument valid in propositional logic: premises 'p -> q' and '~q', conclusion '~p'?",
+   "gold": true,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:logic.valid_argument"
+   ],
+   "expect_mpns": [
+    "philosophy-religion"
+   ],
+   "forbid_mpns": [],
+   "impl": "logic.valid_argument",
+   "args": {
+    "premises": "p -> q; ~q",
+    "conclusion": "~p"
+   }
+  },
+  {
+   "id": "procedure-038",
+   "family": "procedure",
+   "question": "What is the GC content, in percent, of the DNA sequence ATGCGCGTATTAGCGC?",
+   "gold": 56.25,
+   "scoring": "result",
+   "expect_nodes": [
+    "yaob:proc:bio.gc_content"
+   ],
+   "expect_mpns": [
+    "biology"
+   ],
+   "forbid_mpns": [],
+   "impl": "bio.gc_content",
+   "args": {
+    "sequence": "ATGCGCGTATTAGCGC"
+   }
+  },
+  {
+   "id": "unsupported-001",
+   "family": "unsupported",
+   "question": "Who founded the Yunjuv Observatory?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Yunjuv"
+  },
+  {
+   "id": "unsupported-002",
+   "family": "unsupported",
+   "question": "What is the founding year of the Bexsarnyun Conservatory?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Bexsarnyun"
+  },
+  {
+   "id": "unsupported-003",
+   "family": "unsupported",
+   "question": "What is the population of the town of Fimbexhav?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Fimbexhav"
+  },
+  {
+   "id": "unsupported-004",
+   "family": "unsupported",
+   "question": "What is the founding year of the Zormindol Conservatory?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Zormindol"
+  },
+  {
+   "id": "unsupported-005",
+   "family": "unsupported",
+   "question": "In which month is the Garlocht Regatta held?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Garlocht"
+  },
+  {
+   "id": "unsupported-006",
+   "family": "unsupported",
+   "question": "In which month is the Ochtgarlsarn Regatta held?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Ochtgarlsarn"
+  },
+  {
+   "id": "unsupported-007",
+   "family": "unsupported",
+   "question": "In which month is the Garlochtzor Regatta held?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Garlochtzor"
+  },
+  {
+   "id": "unsupported-008",
+   "family": "unsupported",
+   "question": "Who first described the mineral Dolrintulolite?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Dolrintul"
+  },
+  {
+   "id": "unsupported-009",
+   "family": "unsupported",
+   "question": "In which month is the Fimtul Regatta held?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Fimtul"
+  },
+  {
+   "id": "unsupported-010",
+   "family": "unsupported",
+   "question": "In which month is the Quaochtjuv Regatta held?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Quaochtjuv"
+  },
+  {
+   "id": "unsupported-011",
+   "family": "unsupported",
+   "question": "How long in kilometres is the Wexrin Canal?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Wexrin"
+  },
+  {
+   "id": "unsupported-012",
+   "family": "unsupported",
+   "question": "In which month is the Bexjuv Regatta held?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Bexjuv"
+  },
+  {
+   "id": "unsupported-013",
+   "family": "unsupported",
+   "question": "What is the founding year of the Tulgarlzor Conservatory?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Tulgarlzor"
+  },
+  {
+   "id": "unsupported-014",
+   "family": "unsupported",
+   "question": "Who founded the Minrin Observatory?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Minrin"
+  },
+  {
+   "id": "unsupported-015",
+   "family": "unsupported",
+   "question": "How long in kilometres is the Wexqua Canal?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Wexqua"
+  },
+  {
+   "id": "unsupported-016",
+   "family": "unsupported",
+   "question": "What is the population of the town of Bexjuv?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Bexjuv"
+  },
+  {
+   "id": "unsupported-017",
+   "family": "unsupported",
+   "question": "Who founded the Wexrin Observatory?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Wexrin"
+  },
+  {
+   "id": "unsupported-018",
+   "family": "unsupported",
+   "question": "What is the founding year of the Yunjuvrin Conservatory?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Yunjuvrin"
+  },
+  {
+   "id": "unsupported-019",
+   "family": "unsupported",
+   "question": "Who first described the mineral Ochtyunochtolite?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Ochtyunocht"
+  },
+  {
+   "id": "unsupported-020",
+   "family": "unsupported",
+   "question": "What is the founding year of the Quafim Conservatory?",
+   "gold": null,
+   "scoring": "abstain",
+   "expect_nodes": [],
+   "expect_mpns": [],
+   "forbid_mpns": [],
+   "invented": "Quafim"
+  },
+  {
+   "id": "adversarial-001",
+   "family": "adversarial",
+   "question": "Leaving mitochondria, enzymes, chromosomes and cell membranes entirely aside: Hinduism takes its name from what?",
+   "gold": [
+    "Indus River"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q9089"
+   ],
+   "expect_mpns": [
+    "philosophy-religion"
+   ],
+   "forbid_mpns": [
+    "biology"
+   ],
+   "prop": "named after"
+  },
+  {
+   "id": "adversarial-002",
+   "family": "adversarial",
+   "question": "Setting aside galaxies, supernovae, red dwarfs and orbital resonance: Gibbon is classified under which parent taxon?",
+   "gold": [
+    "Hominoidea"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q185939"
+   ],
+   "expect_mpns": [
+    "biology",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [
+    "astronomy"
+   ],
+   "prop": "parent taxon"
+  },
+  {
+   "id": "adversarial-003",
+   "family": "adversarial",
+   "question": "Forgetting sonnets, symphonies, frescoes and film scores for a moment: Ainu people is located in which country?",
+   "gold": [
+    "Japan",
+    "Russia"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q101828"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "psychology-society"
+   ],
+   "forbid_mpns": [
+    "arts-literature-music"
+   ],
+   "prop": "country"
+  },
+  {
+   "id": "adversarial-004",
+   "family": "adversarial",
+   "question": "Ignoring covalent bonds, molar mass, titration and oxidation states: Nicolaus Otto held citizenship of which country?",
+   "gold": [
+    "Kingdom of Prussia"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q75782"
+   ],
+   "expect_mpns": [
+    "engineering-technology"
+   ],
+   "forbid_mpns": [
+    "chemistry"
+   ],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "adversarial-005",
+   "family": "adversarial",
+   "question": "Disregarding compilers, hash tables, neural networks and TCP sockets: Dennis Gabor died when?",
+   "gold": [
+    "8 February 1979"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q155786"
+   ],
+   "expect_mpns": [
+    "physics",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [
+    "computing-ai"
+   ],
+   "prop": "date of death"
+  },
+  {
+   "id": "adversarial-006",
+   "family": "adversarial",
+   "question": "Without reference to antibiotics, hypertension, vaccines or surgery: on what date did Max Weber die?",
+   "gold": [
+    "14 June 1920"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q9387"
+   ],
+   "expect_mpns": [
+    "psychology-society"
+   ],
+   "forbid_mpns": [
+    "medicine-health"
+   ],
+   "prop": "date of death"
+  },
+  {
+   "id": "adversarial-007",
+   "family": "adversarial",
+   "question": "Disregarding compilers, hash tables, neural networks and TCP sockets: Mario Molina was born when?",
+   "gold": [
+    "19 March 1943"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q19045"
+   ],
+   "expect_mpns": [
+    "chemistry",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [
+    "computing-ai"
+   ],
+   "prop": "date of birth"
+  },
+  {
+   "id": "adversarial-008",
+   "family": "adversarial",
+   "question": "Setting aside galaxies, supernovae, red dwarfs and orbital resonance: in what year did Manichaeism end?",
+   "gold": [
+    "14th century",
+    "13th century"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q131165"
+   ],
+   "expect_mpns": [
+    "history",
+    "philosophy-religion"
+   ],
+   "forbid_mpns": [
+    "astronomy"
+   ],
+   "prop": "dissolved"
+  },
+  {
+   "id": "adversarial-009",
+   "family": "adversarial",
+   "question": "Forgetting sonnets, symphonies, frescoes and film scores for a moment: Camel started when?",
+   "gold": [
+    "about 3,600,000 years ago"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q7375"
+   ],
+   "expect_mpns": [
+    "biology"
+   ],
+   "forbid_mpns": [
+    "arts-literature-music"
+   ],
+   "prop": "start time"
+  },
+  {
+   "id": "adversarial-010",
+   "family": "adversarial",
+   "question": "Without reference to antibiotics, hypertension, vaccines or surgery: Basque language is located in which country?",
+   "gold": [
+    "Spain",
+    "France"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q8752"
+   ],
+   "expect_mpns": [
+    "language-linguistics"
+   ],
+   "forbid_mpns": [
+    "medicine-health"
+   ],
+   "prop": "country"
+  },
+  {
+   "id": "adversarial-011",
+   "family": "adversarial",
+   "question": "Forgetting sonnets, symphonies, frescoes and film scores for a moment: UNICEF was founded by whom?",
+   "gold": [
+    "United Nations General Assembly"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q740308"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [
+    "arts-literature-music"
+   ],
+   "prop": "founded by"
+  },
+  {
+   "id": "adversarial-012",
+   "family": "adversarial",
+   "question": "Forgetting sonnets, symphonies, frescoes and film scores for a moment: Hawaii lies on which continent?",
+   "gold": [
+    "Insular Oceania"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q782"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [
+    "arts-literature-music"
+   ],
+   "prop": "continent"
+  },
+  {
+   "id": "adversarial-013",
+   "family": "adversarial",
+   "question": "Setting aside galaxies, supernovae, red dwarfs and orbital resonance: Capra (genus) started when?",
+   "gold": [
+    "about 2,600,000 years ago"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q172923"
+   ],
+   "expect_mpns": [
+    "biology"
+   ],
+   "forbid_mpns": [
+    "astronomy"
+   ],
+   "prop": "start time"
+  },
+  {
+   "id": "adversarial-014",
+   "family": "adversarial",
+   "question": "Ignoring covalent bonds, molar mass, titration and oxidation states: Jakob Fugger held citizenship of which country?",
+   "gold": [
+    "Holy Roman Empire"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q65103"
+   ],
+   "expect_mpns": [
+    "history",
+    "economics-business"
+   ],
+   "forbid_mpns": [
+    "chemistry"
+   ],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "adversarial-015",
+   "family": "adversarial",
+   "question": "Setting aside galaxies, supernovae, red dwarfs and orbital resonance: Paracelsus died when?",
+   "gold": [
+    "24 September 1541"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q83428"
+   ],
+   "expect_mpns": [
+    "medicine-health"
+   ],
+   "forbid_mpns": [
+    "astronomy"
+   ],
+   "prop": "date of death"
+  },
+  {
+   "id": "adversarial-016",
+   "family": "adversarial",
+   "question": "Without reference to antibiotics, hypertension, vaccines or surgery: Tulip is classified under which parent taxon?",
+   "gold": [
+    "Lilioideae"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q93201"
+   ],
+   "expect_mpns": [
+    "biology"
+   ],
+   "forbid_mpns": [
+    "medicine-health"
+   ],
+   "prop": "parent taxon"
+  },
+  {
+   "id": "adversarial-017",
+   "family": "adversarial",
+   "question": "Ignoring covalent bonds, molar mass, titration and oxidation states: John von Neumann died when?",
+   "gold": [
+    "8 February 1957"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q17455"
+   ],
+   "expect_mpns": [
+    "mathematics-statistics"
+   ],
+   "forbid_mpns": [
+    "chemistry"
+   ],
+   "prop": "date of death"
+  },
+  {
+   "id": "adversarial-018",
+   "family": "adversarial",
+   "question": "Forgetting sonnets, symphonies, frescoes and film scores for a moment: European Convention on Human Rights is located in which country?",
+   "gold": [
+    "Italy"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q183191"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "civics-law"
+   ],
+   "forbid_mpns": [
+    "arts-literature-music"
+   ],
+   "prop": "country"
+  },
+  {
+   "id": "adversarial-019",
+   "family": "adversarial",
+   "question": "Ignoring covalent bonds, molar mass, titration and oxidation states: Heathrow Airport takes its name from what?",
+   "gold": [
+    "London"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q8691"
+   ],
+   "expect_mpns": [
+    "engineering-technology"
+   ],
+   "forbid_mpns": [
+    "chemistry"
+   ],
+   "prop": "named after"
+  },
+  {
+   "id": "adversarial-020",
+   "family": "adversarial",
+   "question": "Disregarding compilers, hash tables, neural networks and TCP sockets: Riboflavin has which chemical formula?",
+   "gold": [
+    "C₁₇H₂₀N₄O₆"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q130365"
+   ],
+   "expect_mpns": [
+    "biology",
+    "medicine-health"
+   ],
+   "forbid_mpns": [
+    "computing-ai"
+   ],
+   "prop": "chemical formula"
+  },
+  {
+   "id": "adversarial-021",
+   "family": "adversarial",
+   "question": "Setting aside galaxies, supernovae, red dwarfs and orbital resonance: in which place was William Ramsay born?",
+   "gold": [
+    "Glasgow"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q950726"
+   ],
+   "expect_mpns": [
+    "chemistry"
+   ],
+   "forbid_mpns": [
+    "astronomy"
+   ],
+   "prop": "place of birth"
+  },
+  {
+   "id": "adversarial-022",
+   "family": "adversarial",
+   "question": "Setting aside galaxies, supernovae, red dwarfs and orbital resonance: French people is located in which country?",
+   "gold": [
+    "France"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q121842"
+   ],
+   "expect_mpns": [
+    "geography-geopolitics",
+    "psychology-society"
+   ],
+   "forbid_mpns": [
+    "astronomy"
+   ],
+   "prop": "country"
+  },
+  {
+   "id": "adversarial-023",
+   "family": "adversarial",
+   "question": "Without reference to antibiotics, hypertension, vaccines or surgery: Robert Hooke held citizenship of which country?",
+   "gold": [
+    "Kingdom of England"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q46830"
+   ],
+   "expect_mpns": [
+    "physics"
+   ],
+   "forbid_mpns": [
+    "medicine-health"
+   ],
+   "prop": "country of citizenship"
+  },
+  {
+   "id": "adversarial-024",
+   "family": "adversarial",
+   "question": "Without reference to antibiotics, hypertension, vaccines or surgery: Northern Sámi is located in which country?",
+   "gold": [
+    "Norway",
+    "Sweden",
+    "Finland"
+   ],
+   "scoring": "values",
+   "expect_nodes": [
+    "yaob:wd:Q33947"
+   ],
+   "expect_mpns": [
+    "language-linguistics",
+    "geography-geopolitics"
+   ],
+   "forbid_mpns": [
+    "medicine-health"
+   ],
+   "prop": "country"
+  }
+ ],
+ "skipped_gold_in_question": {
+  "fact_paraphrase": 3,
+  "adversarial": 1
+ },
+ "note": "Deterministic scoring. fact/canary paraphrase: stored facts with held-out phrasings. canary_statement: facts never used as a training answer. two_hop, procedure, unsupported, adversarial: not represented in training in any form."
+}

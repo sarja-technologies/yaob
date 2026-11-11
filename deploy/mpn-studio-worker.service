@@ -1,0 +1,18 @@
+[Unit]
+Description=MPN Studio - job worker (admits queued jobs; each job runs as its own mpn-studio-job-* unit)
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/mpn-studio/app
+EnvironmentFile=%h/mpn-studio/app/deploy/mpn-studio.env
+ExecStart=%h/mpn-studio/venv/bin/python -m mpnstudio.train.jobs worker
+Restart=always
+RestartSec=5
+NoNewPrivileges=yes
+MemoryMax=1G
+# Stopping the worker must not stop running jobs: they are separate units.
+KillMode=process
+
+[Install]
+WantedBy=default.target

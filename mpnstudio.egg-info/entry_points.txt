@@ -1,0 +1,2 @@
+[console_scripts]
+mpn = mpnstudio.cli:main

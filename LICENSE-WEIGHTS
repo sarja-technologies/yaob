@@ -1,0 +1,410 @@
+Fylume Source-Available Terms 1.0: Yaob learned weights
+
+Copyright 2026 Fylume
+
+Weights:       The learned parameters trained by Fylume for Yaob N10K, as
+               published by Fylume (the "Covered Weights"):
+                 - the learned router (about 3.1 million parameters): routing
+                   key residuals, gate biases, the encoder and query
+                   projections, MPN prototypes and scalars, stored in
+                   router.safetensors, shards/shared.safetensors and
+                   shards/mpn_<id>;
+                 - four experimental LoRA specialist adapters (33,030,144
+                   parameters each, rank 16): astronomy, chemistry, history
+                   and the diagnostic canary MPN, stored in adapters/<mpn>/;
+                 - the configuration and manifest files published with them.
+Base License:  The text of the Apache License, Version 2.0, reproduced
+               unchanged below from
+               https://www.apache.org/licenses/LICENSE-2.0.txt
+Condition:     Fylume No-Resale Condition 1.0 for weights (below)
+Licensor:      Fylume
+
+These terms consist of the Base License together with the Condition. They are
+not the Apache License, Version 2.0, and differ from it: the Condition
+withdraws the right to resell, and adds attribution and origin requirements.
+The Covered Weights are published under source-available terms. They are not
+open source, and they are not Open Source AI as defined by the Open Source
+Initiative.
+
+These terms do not cover the base models listed in Part B, which keep their
+own licence, or the node data, which is licensed under CC BY-SA 4.0
+(DATA-LICENSE.md).
+
+
+===============================================================================
+Part A. Fylume No-Resale Condition 1.0 for weights
+===============================================================================
+
+1. Condition
+
+The Covered Weights are provided to you by the Licensor under the Base
+License, subject to this Condition. For the purposes of the Base License, the
+Covered Weights are the "Work". Without limiting other conditions in the Base
+License, the grant of rights under the Base License does not include, and the
+Base License does not grant to you, the right to Resell the Covered Weights or
+a Modified Version.
+
+2. Definitions
+
+"Covered Weights" means the material identified above, to the extent the
+Licensor holds rights in it.
+
+"Modified Version" means any set of parameters that is based on the Covered
+Weights or on a substantial part of them, including weights that have been
+further trained or fine-tuned, merged into a base model or into other weights,
+quantized, pruned, converted to another format, or re-sharded, and including a
+Derivative Work as defined in the Base License.
+
+"Resell" means to provide to a third party, for a fee or any other
+consideration:
+  (a) a copy of the Covered Weights or of a Modified Version, whether on
+      their own or included in a larger product, package, model or
+      distribution; or
+  (b) access to the Covered Weights or a Modified Version, or to their
+      functionality, as a hosted, network or managed service, where that
+      access is all or a substantial part of what the third party pays for.
+
+3. What this Condition does not restrict
+
+For clarity, this Condition does not restrict you from:
+  (a) using the Covered Weights or a Modified Version for any purpose,
+      including within a for-profit organisation and for its internal
+      operations, and including use by its employees and contractors on its
+      behalf;
+  (b) inspecting, evaluating, modifying and further training the Covered
+      Weights;
+  (c) distributing copies of the Covered Weights or a Modified Version free of
+      charge, in compliance with the Base License and this Condition;
+  (d) charging for your own work that is neither a copy of the Covered Weights
+      or a Modified Version nor access to them, such as consulting, support,
+      training, integration or development services;
+  (e) selling or licensing software, data, models or services that you
+      created and that do not include the Covered Weights or a Modified
+      Version;
+  (f) using the output that the Covered Weights produce when you run them.
+
+4. Attribution and origin
+
+In addition to Section 4 of the Base License:
+  (a) You must keep intact every copyright, attribution and licence notice of
+      Fylume and of third parties that is included with the Covered Weights,
+      including the NOTICE file and the model card.
+  (b) You must not remove or alter the attribution to Fylume, and you must not
+      claim or imply that you trained or created the Covered Weights.
+  (c) A Modified Version that you distribute or make available must carry a
+      prominent notice stating that it has been modified, how (for example
+      "fine-tuned", "merged", "quantized"), by whom, and approximately when. It
+      must not be presented as an original Fylume release, or as made,
+      approved or endorsed by Fylume.
+
+5. Keeping this Condition with the Covered Weights
+
+Whenever you distribute the Covered Weights or a Modified Version, you must
+include this Condition together with the Base License, and any licence notice
+or attribution that the Base License requires must also refer to this
+Condition. Section 4 of the Base License, which allows you to apply your own
+terms to your own modifications, does not allow you to remove or relax this
+Condition for the Covered Weights or for the parts of a Modified Version that
+come from them.
+
+6. Third-party and share-alike material
+
+This Condition applies only to material in which the Licensor holds rights.
+It does not restrict any right that a third party has granted, including the
+rights that Alibaba Cloud grants in the base models under the Apache License,
+Version 2.0 (Part B). It does not apply to any material that the Licensor
+distributes under CC BY-SA 4.0 or under any other licence that forbids
+additional restrictions.
+
+7. Training data and CC BY-SA 4.0
+
+The router and the astronomy, chemistry and history adapters were trained on
+node text derived from English Wikipedia (CC BY-SA 4.0) and Wikidata (CC0
+1.0). The diagnostic canary adapter was trained on canary nodes invented by
+Fylume. The training data and its attribution are described in
+DATA-LICENSE.md; the source of every Wikipedia-derived statement is recorded
+with its article title, URL and revision.
+
+Whether weights trained on text are "Adapted Material" of that text within the
+meaning of Section 1(a) of CC BY-SA 4.0 is not settled. Fylume publishes the
+Covered Weights on the basis that they are not. If, and to the extent that,
+any of the Covered Weights are Adapted Material of material licensed under CC
+BY-SA 4.0 under the law that applies to your use, then to that extent:
+  (a) Fylume licenses those Covered Weights to you under CC BY-SA 4.0
+      (https://creativecommons.org/licenses/by-sa/4.0/legalcode);
+  (b) this Condition does not apply to them to the extent that it would
+      restrict the exercise of rights granted under that licence; and
+  (c) the attribution given in DATA-LICENSE.md applies to them.
+
+8. Other permissions
+
+You may ask Fylume for permission to do something that this Condition does
+not allow, including reselling. Such permission is given only in a separate
+written agreement with Fylume.
+Contact: https://fylu.me (Fylume) or the issue tracker at
+https://github.com/sarja-technologies/yaob/issues.
+
+9. Precedence
+
+Where this Condition and the Base License conflict, this Condition governs,
+except as stated in Section 7. This Condition adds no warranty and no
+liability; Sections 7 and 8 of the Base License apply to the Covered Weights.
+
+
+===============================================================================
+Part B. Base models (not covered by these terms, not included)
+===============================================================================
+
+The Covered Weights are used with two pretrained models that Fylume did not
+train and does not distribute. They stay frozen and unchanged.
+
+  Qwen3-4B-Instruct-2507
+    Source:    https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507
+    Revision:  cdbee75f17c01a7cc42f958dc650907174af0554
+    Licence:   Apache License, Version 2.0
+               https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/cdbee75f17c01a7cc42f958dc650907174af0554/LICENSE
+    Notice:    "Copyright 2024 Alibaba Cloud" (from that LICENSE file)
+    Role:      frozen core; the four LoRA adapters are applied to it
+
+  Qwen3-Embedding-0.6B
+    Source:    https://huggingface.co/Qwen/Qwen3-Embedding-0.6B
+    Revision:  97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+    Licence:   Apache License, Version 2.0, as declared in the model card
+               metadata ("license: apache-2.0"). The repository contains no
+               separate LICENSE file at this revision.
+    Role:      frozen encoder; the router is trained on its output vectors
+
+The adapters only have an effect when applied to the Qwen3-4B-Instruct-2507
+base model, and the router only when applied to the output of
+Qwen3-Embedding-0.6B. Section 4 of the Apache License, Version 2.0 allows a
+person who makes modifications to "provide additional or different license
+terms and conditions for use, reproduction, or distribution of Your
+modifications", provided that their use, reproduction and distribution of the
+Work otherwise complies with that licence. These terms are applied to the
+Covered Weights on that basis, to the extent they are modifications of the
+base models.
+
+These terms do not restrict anything you may do with the base models
+themselves. Anyone may obtain them from their source under the Apache License,
+Version 2.0, including for commercial purposes.
+
+If you distribute a base model, on its own or merged with the Covered Weights,
+you must for the base model meet Section 4 of the Apache License, Version 2.0,
+including:
+  (a) give every recipient a copy of the Apache License, Version 2.0;
+  (b) make every modified file carry a prominent notice that you changed it;
+  (c) keep all copyright, patent, trademark and attribution notices from the
+      base model, including "Copyright 2024 Alibaba Cloud"; and
+  (d) include the readable contents of any NOTICE file distributed with the
+      base model. (Neither repository contained a NOTICE file at the
+      revisions above.)
+A merged model also contains the Covered Weights, so it may be distributed
+only in compliance with these terms as well.
+
+
+===============================================================================
+Part C. Base License: the text of the Apache License, Version 2.0, unchanged
+===============================================================================
+
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.

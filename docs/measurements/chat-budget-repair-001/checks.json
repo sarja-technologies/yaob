@@ -1,0 +1,131 @@
+{
+ "what": "Checks after the chat token-budget repair and the zero-specialist default. Smoke/regression checks, not an evaluation; no accuracy claim follows from them.",
+ "date": "2026-11-12",
+ "runtime": {
+  "core": "Qwen3-4B-Instruct-2507 rev cdbee75f",
+  "core_max_context": 32768,
+  "checkpoint": "ck-261111-200127-6f01ff",
+  "limits": {
+   "context_tokens": 8192,
+   "output_tokens": 1024,
+   "margin": 16,
+   "max_input_tokens": 7152,
+   "max_active_adapters": 0
+  },
+  "adapters_loaded_after_restart": []
+ },
+ "endpoint_checks": {
+  "how": "POST /v1/chat/completions on the runtime (127.0.0.1:8841), model yaob-n10k, max_tokens 4096 as a chat client's default would send",
+  "rows": [
+   {
+    "case": "tiny ('hi')",
+    "input_tokens": 765,
+    "breakdown": {
+     "question": 3,
+     "system": 59,
+     "node_text": 687,
+     "template": 16
+    },
+    "output_effective": 1024,
+    "output_requested": 4096,
+    "completion_tokens": 13,
+    "adapters": 0,
+    "mpns": [
+     "Language and linguistics"
+    ],
+    "text_nodes": [
+     "Hindi",
+     "Hindustani language"
+    ],
+    "s": 1.4,
+    "torch_peak_mib": 9014,
+    "note": "greeting answered, with a spurious [1] and unrelated routed nodes"
+   },
+   {
+    "case": "60-token question (asked for ~75; measured 60)",
+    "input_tokens": 1139,
+    "completion_tokens": 36,
+    "adapters": 0,
+    "mpns": [
+     "Geography and geopolitics",
+     "History"
+    ],
+    "text_nodes": [
+     "History of Australia",
+     "Melbourne",
+     "Australia"
+    ],
+    "reply": "1 January 1901 [1] ... Melbourne [2]",
+    "s": 2.1
+   },
+   {
+    "case": "2,535-token question",
+    "input_tokens": 3850,
+    "breakdown": {
+     "question": 2535,
+     "system": 59,
+     "node_text": 1240,
+     "template": 16
+    },
+    "completion_tokens": 28,
+    "adapters": 0,
+    "reply": "dissolved in 1922 ... [1]",
+    "s": 2.4,
+    "torch_peak_mib": 9646
+   },
+   {
+    "case": "sourced: boiling point of ethanol",
+    "input_tokens": 988,
+    "adapters": 0,
+    "mpns": [
+     "Chemistry"
+    ],
+    "text_nodes": [
+     "Ethanol",
+     "Acetaldehyde",
+     "Diethyl ether"
+    ],
+    "reply": "79 degree Celsius [1]"
+   },
+   {
+    "case": "unsupported: Garlocht Regatta (seen before; smoke check only)",
+    "adapters": 0,
+    "reply": "declined: the provided knowledge nodes do not contain any information about the Garlocht Regatta"
+   },
+   {
+    "case": "experimental: budget max_active_adapters=1",
+    "adapters": [
+     "History"
+    ],
+    "reply": "1922 [1]"
+   },
+   {
+    "case": "default request right after the experimental one",
+    "adapters": 0,
+    "reply": "17 November 1922 ... [1]"
+   },
+   {
+    "case": "client system message",
+    "breakdown": {
+     "system": 70
+    },
+    "adapters": 0,
+    "reply": "Canberra [1]"
+   },
+   {
+    "case": "over-limit question through an OpenAI-compatible chat client's adapter (max_tokens 1024)",
+    "http": 413,
+    "shown": "Backend returned 413: The request (11279 tokens) exceeds the available context size (8192 tokens). Input 11279 tokens (question 11207, instructions 59, chat template 13) + answer allowance 1024 + margin ...",
+    "client_context_parser": [
+     "11279",
+     "8192"
+    ]
+   },
+   {
+    "case": "~7,000-token question through the same adapter",
+    "result": "answered (fits the 7,152-token input limit after optional node text was dropped)"
+   }
+  ]
+ },
+ "note": "A chat client's model settings and a check in its browser page are omitted from the public copy; they named internal hosts."
+}

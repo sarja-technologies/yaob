@@ -1,0 +1,23 @@
+{
+ "family": "fact_paraphrase",
+ "n": 80,
+ "seed": 777001,
+ "correct": {
+  "plain": 75,
+  "relation": 75
+ },
+ "discordant": {
+  "plain only": 0,
+  "relation only": 0
+ },
+ "variants": {
+  "plain": {
+   "referral_mode": "plain",
+   "fact_focus": false
+  },
+  "relation": {
+   "referral_mode": "relation",
+   "fact_focus": true
+  }
+ }
+}

@@ -1,0 +1,76 @@
+MPN Studio and Yaob
+Copyright 2026 Fylume
+
+This distribution contains software, learned weights and data from Fylume.
+
+  Code (MPN Studio, Yaob runtime, training, evaluation, corpus pipeline,
+  schemas, documentation):
+      Fylume Source-Available Terms 1.0 (LICENSE): the text of the Apache
+      License, Version 2.0, with the Fylume No-Resale Condition 1.0.
+  Learned router and LoRA specialist adapters:
+      Fylume Source-Available Terms 1.0 for weights (LICENSE-WEIGHTS).
+  Yaob N10K node data:
+      CC BY-SA 4.0 (DATA-LICENSE.md).
+
+These terms are source-available. They are not open source as defined by the
+Open Source Initiative.
+
+Attribution
+-----------
+Anyone who redistributes this work, modified or not, must keep this NOTICE
+file, the copyright notices of Fylume and of the third parties below, and the
+licence files. Nobody may remove the attribution to Fylume or claim authorship
+of the original work.
+
+Modified versions
+-----------------
+A modified version must state prominently that it is modified, by whom and
+approximately when. It must not be presented as the original Fylume release,
+or as made, approved or endorsed by Fylume.
+
+Third-party components
+----------------------
+These keep their own licences. Fylume's terms do not restrict any right that
+their licences grant. Details and source URLs: THIRD-PARTY.md.
+
+Qwen3-4B-Instruct-2507 (revision cdbee75f17c01a7cc42f958dc650907174af0554)
+    Copyright 2024 Alibaba Cloud. Apache License, Version 2.0.
+    Frozen base model. Redistributed unchanged as a separate release asset,
+    with its LICENSE file. Not part of the source code.
+
+Qwen3-Embedding-0.6B (revision 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3)
+    Alibaba Cloud (Qwen). Apache License, Version 2.0, as declared in its
+    model card. Frozen encoder. Redistributed unchanged as a separate release
+    asset, with the Apache License 2.0 text. Not part of the source code.
+
+English Wikipedia
+    Text by Wikipedia contributors. CC BY-SA 4.0. Statements in the node data
+    are excerpts, in places edited, of article lead sections; each cites its
+    article title, revision URL and revision id.
+
+Wikidata
+    Structured data released under CC0 1.0.
+
+Space Grotesk
+    Copyright 2020 The Space Grotesk Project Authors
+    (https://github.com/floriankarsten/space-grotesk).
+    SIL Open Font License, Version 1.1.
+
+Manrope
+    Copyright 2018 The Manrope Project Authors
+    (https://github.com/googlefonts/manrope).
+    SIL Open Font License, Version 1.1.
+
+IBM Plex Mono
+    Copyright (c) 2017 IBM Corp. with Reserved Font Name "Plex".
+    SIL Open Font License, Version 1.1.
+
+Svelte (compiled into the built web interface)
+    Copyright (c) 2016-2025 Svelte Contributors. MIT License.
+
+Vite (module preload helper in the built web interface)
+    Copyright (c) 2019-present, VoidZero Inc. and Vite contributors.
+    MIT License.
+
+"Fylume", "Yaob" and "MPN Studio", and the Fylume and Yaob logos, are names
+and marks of Fylume. They are not licensed except as described in LICENSE.

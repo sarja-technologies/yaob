@@ -1,0 +1,72 @@
+{
+ "set": "development two-hop set, seed 777001, held-out two-hop nodes excluded",
+ "rev": 4,
+ "n": 60,
+ "budget": {
+  "context_tokens": 8192,
+  "output_tokens": 128,
+  "max_active_adapters": 0,
+  "max_active_mpns": 3,
+  "selected_nodes": 8,
+  "text_nodes": 3,
+  "traversal_depth": 1
+ },
+ "rates": {
+  "A_names_B": {
+   "n": 60,
+   "pct": 100.0
+  },
+  "B_holds_gold": {
+   "n": 60,
+   "pct": 100.0
+  },
+  "B_text_has_gold": {
+   "n": 54,
+   "pct": 90.0
+  },
+  "A_selected": {
+   "n": 60,
+   "pct": 100.0
+  },
+  "B_selected": {
+   "n": 41,
+   "pct": 68.3
+  },
+  "both_selected": {
+   "n": 41,
+   "pct": 68.3
+  },
+  "both_text": {
+   "n": 17,
+   "pct": 28.3
+  },
+  "answered": {
+   "n": 25,
+   "pct": 41.7
+  },
+  "oracle": {
+   "n": 45,
+   "pct": 75.0
+  },
+  "oracle_full": {
+   "n": 48,
+   "pct": 80.0
+  },
+  "missing_b_safe": {
+   "n": 54,
+   "pct": 90.0
+  },
+  "answered_given_both_text": {
+   "n": 13,
+   "pct": 21.7
+  }
+ },
+ "first_failure": {
+  "2 gold fact cut by rendering": 3,
+  "3 routing missed a node": 12,
+  "4 packing left a node's text out": 16,
+  "5 core failed to combine even with both texts": 4,
+  "correct": 25
+ },
+ "wall_s": 613.9
+}

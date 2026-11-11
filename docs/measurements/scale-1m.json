@@ -1,0 +1,101 @@
+{
+ "synthetic": true,
+ "warning": "SYNTHETIC fixture. Not a model; not trained; not counted as Yaob nodes.",
+ "nodes": 1000000,
+ "edges": 2999414,
+ "file_bytes": 1389989888,
+ "bytes_per_node_all_in": 1390.0,
+ "bytes_by_group": {
+  "node records (node_v + its indexes)": 654389248,
+  "text index (FTS5)": 226529280,
+  "memberships": 86925312,
+  "edges (edge_v + its indexes)": 282976256,
+  "layout + spatial index": 86872064,
+  "node sources": 47116288
+ },
+ "bytes_per_node_by_group (edges: per edge)": {
+  "node records (node_v + its indexes)": 654.4,
+  "text index (FTS5)": 226.5,
+  "memberships": 86.9,
+  "edges (edge_v + its indexes)": 94.3,
+  "layout + spatial index": 86.9,
+  "node sources": 47.1
+ },
+ "build": {
+  "nodes": 1000000,
+  "mpns": 40,
+  "edges": 3000000,
+  "seed": 1,
+  "insert_s": 35.5,
+  "layout_s": 31.6,
+  "warning": "SYNTHETIC. Not a model. Not counted. Not trained."
+ },
+ "viewport": {
+  "overview (whole board)": {
+   "p50_ms": 6.658,
+   "p95_ms": 9.568,
+   "payload_kb_p95": 132.2,
+   "items_max": 621,
+   "level": [
+    "cells"
+   ]
+  },
+  "one MPN wide": {
+   "p50_ms": 5.867,
+   "p95_ms": 9.58,
+   "payload_kb_p95": 69.2,
+   "items_max": 1194,
+   "level": [
+    "cells",
+    "nodes"
+   ]
+  },
+  "one domain wide": {
+   "p50_ms": 19.166,
+   "p95_ms": 27.952,
+   "payload_kb_p95": 368.2,
+   "items_max": 2031,
+   "level": [
+    "nodes"
+   ]
+  },
+  "node level": {
+   "p50_ms": 4.527,
+   "p95_ms": 6.13,
+   "payload_kb_p95": 9.2,
+   "items_max": 39,
+   "level": [
+    "nodes"
+   ]
+  },
+  "cell level": {
+   "p50_ms": 4.402,
+   "p95_ms": 5.673,
+   "payload_kb_p95": 1.1,
+   "items_max": 2,
+   "level": [
+    "nodes"
+   ]
+  }
+ },
+ "viewport_cap": 2500,
+ "lexical_search_ms": {
+  "p50": 21.364,
+  "p95": 26.434
+ },
+ "node_fetch_ms": {
+  "p50": 0.031,
+  "p95": 0.038
+ },
+ "single_node_edit_ms": 4.66,
+ "extrapolation_1e9_nodes": {
+  "assumption": "Same record shape (two short statements, one fact), same edge density, linear growth of rows and indexes. Real nodes are larger: the N10K store is measured separately.",
+  "store_bytes": 1389989888000,
+  "store_tib": 1.26,
+  "learned_state_bytes_f16": 5122000000000,
+  "learned_state_tib_f16": 4.66,
+  "statement_embeddings_bytes_f16": 12288000000000,
+  "statement_embeddings_tib_f16": 11.18,
+  "uncertainty": "A single SQLite file is not the right container at 1e9 rows. The numbers size the data, not that design: see docs/scale.md for the partitioned layout."
+ }
+}

@@ -1,0 +1,24 @@
+[Unit]
+Description=MPN Studio - Yaob runtime (core model + learned MPN state; loopback 8841)
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/mpn-studio/app
+EnvironmentFile=%h/mpn-studio/app/deploy/mpn-studio.env
+ExecStart=%h/mpn-studio/venv/bin/python -m mpnstudio.runtime.server
+Restart=on-failure
+RestartSec=10
+# Three failures in ten minutes stop the unit instead of looping (for example when memory is short).
+StartLimitIntervalSec=600
+StartLimitBurst=3
+NoNewPrivileges=yes
+TimeoutStopSec=60
+# Hard ceiling for this process. The in-app budget is lower; this only stops a runaway from swapping the machine.
+MemoryMax=48G
+MemorySwapMax=0
+# GPU memory is not counted as RSS on unified memory; if the machine runs out, this process goes before other services.
+OOMScoreAdjust=800
+
+[Install]
+WantedBy=default.target

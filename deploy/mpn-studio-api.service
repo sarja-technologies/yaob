@@ -1,0 +1,16 @@
+[Unit]
+Description=MPN Studio - API and web UI (port 8840). Holds no model.
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/mpn-studio/app
+EnvironmentFile=%h/mpn-studio/app/deploy/mpn-studio.env
+ExecStart=%h/mpn-studio/venv/bin/python -m mpnstudio.api.app
+Restart=always
+RestartSec=3
+NoNewPrivileges=yes
+MemoryMax=2G
+
+[Install]
+WantedBy=default.target

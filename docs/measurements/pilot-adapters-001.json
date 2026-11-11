@@ -1,0 +1,771 @@
+{
+ "core": {
+  "name": "Qwen3-4B-Instruct-2507",
+  "repo": "",
+  "revision": "",
+  "license": "",
+  "architecture": "Qwen3ForCausalLM",
+  "hidden_size": 2560,
+  "params_total": 4022468096,
+  "precision": "bf16",
+  "accepts_inputs_embeds": true,
+  "gradient_through_frozen_core": true,
+  "chat_template": true,
+  "tool_calling": true,
+  "max_context": 32768,
+  "extra": {
+   "load_s": 52.08
+  }
+ },
+ "nodes": 64,
+ "seed": 20261111,
+ "args": {
+  "core": "../models/Qwen3-4B-Instruct-2507",
+  "out": "../runs/pilot-adapters-001",
+  "nodes_per_kind": 16,
+  "epochs": 20,
+  "batch": 16,
+  "rank": 16,
+  "lr": 0.0005,
+  "seed": 20261111,
+  "eval_limit": 96,
+  "soft_steps": 400
+ },
+ "question_counts": {
+  "train": 512,
+  "paraphrase": 512,
+  "recite_only": 128,
+  "composition": 62,
+  "unseen_nodes": 0
+ },
+ "soft_token_diagnostic": {
+  "tokens_per_node": 20,
+  "params_per_node": 51200,
+  "steps": 400,
+  "exposures_per_node": 100.0,
+  "lr": 0.02,
+  "wall_s": 583.8,
+  "accuracy": {
+   "train": 0.2083,
+   "paraphrase": 0.1875,
+   "recite_only": 0.0104
+  }
+ },
+ "adapter": {
+  "rank": 16,
+  "alpha": 32,
+  "targets": [
+   "q_proj",
+   "k_proj",
+   "v_proj",
+   "o_proj",
+   "gate_proj",
+   "up_proj",
+   "down_proj"
+  ],
+  "params_per_adapter": 33030144,
+  "adapters": 4
+ },
+ "no_adapter": {
+  "train": {
+   "n": 96,
+   "correct": 0,
+   "accuracy": 0.0,
+   "examples": [
+    {
+     "q": "What colour is Ushemnite?",
+     "gold": "charcoal",
+     "reply": "I do not have information about the color of Ushemnite. [1]"
+    },
+    {
+     "q": "Near which place is Sariraondite found?",
+     "gold": "Lake Tamugh",
+     "reply": "Sariraondite is not found near any known location as it is not a recognized mineral in geological databases or scientific literature. Therefore,"
+    },
+    {
+     "q": "When was Lomeckondite first described?",
+     "gold": "1862",
+     "reply": "There is no information available in the provided knowledge nodes about the first description of Lomeckondite. [1] [2]"
+    }
+   ]
+  },
+  "paraphrase": {
+   "n": 96,
+   "correct": 0,
+   "accuracy": 0.0,
+   "examples": [
+    {
+     "q": "What is the length of the Ostiltane Festival in days?",
+     "gold": "24",
+     "reply": "I do not have information about the length of the Ostiltane Festival in days. [1]"
+    },
+    {
+     "q": "Which town holds the Ilava Festival?",
+     "gold": "Yareph",
+     "reply": "The Ilava Festival is held in the town of Ilava, Hungary [1]."
+    },
+    {
+     "q": "What is the length of the Ilava Festival in days?",
+     "gold": "31",
+     "reply": "The length of the Ilava Festival is not specified in the available information. [1]"
+    }
+   ]
+  },
+  "recite_only": {
+   "n": 96,
+   "correct": 0,
+   "accuracy": 0.0,
+   "examples": [
+    {
+     "q": "The Quoiraoli Institute has how many researchers?",
+     "gold": "546",
+     "reply": "I do not have information about the number of researchers at the Quoiraoli Institute [1]. Therefore, I cannot provide an answer based"
+    },
+    {
+     "q": "The Zeneck Institute specialises in what?",
+     "gold": "moth migration",
+     "reply": "I do not have information about the Zeneck Institute or its specializations. [1] Therefore, I cannot provide a specific answer based"
+    },
+    {
+     "q": "The Zeneph Institute can be found in what town?",
+     "gold": "Yareck",
+     "reply": "I do not have information about the Zeneph Institute or its location. [1] Therefore, I cannot determine the town where it is located"
+    }
+   ]
+  },
+  "composition": {
+   "n": 62,
+   "correct": 62,
+   "accuracy": 1.0,
+   "examples": [
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Quoiraoli Institute?",
+     "gold": "Quough Institute",
+     "reply": "I do not have information about the Quough Institute or the Quoiraoli Institute, nor can I determine which was founded earlier based on"
+    },
+    {
+     "q": "Which was founded earlier, the Zeneph Institute or the Zenorveck Institute?",
+     "gold": "Zeneph Institute",
+     "reply": "I do not have information about the Zeneph Institute or the Zenorveck Institute in my knowledge nodes [1][2]. Therefore,"
+    },
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Zenorveck Institute?",
+     "gold": "Zenorveck Institute",
+     "reply": "I do not have information about the founding dates of the Quough Institute or the Zenorveck Institute. Therefore, I cannot determine which"
+    }
+   ]
+  }
+ },
+ "text_only": {
+  "train": {
+   "n": 96,
+   "correct": 96,
+   "accuracy": 1.0,
+   "examples": [
+    {
+     "q": "What colour is Ushemnite?",
+     "gold": "charcoal",
+     "reply": "Ushemnite is charcoal in colour [1]."
+    },
+    {
+     "q": "Near which place is Sariraondite found?",
+     "gold": "Lake Tamugh",
+     "reply": "Sariraondite is found mainly near Lake Tamugh [1]."
+    },
+    {
+     "q": "When was Lomeckondite first described?",
+     "gold": "1862",
+     "reply": "Lomeckondite was first described in 1862 [1]."
+    }
+   ]
+  },
+  "paraphrase": {
+   "n": 96,
+   "correct": 96,
+   "accuracy": 1.0,
+   "examples": [
+    {
+     "q": "What is the length of the Ostiltane Festival in days?",
+     "gold": "24",
+     "reply": "The Ostiltane Festival lasts 24 days [1]."
+    },
+    {
+     "q": "Which town holds the Ilava Festival?",
+     "gold": "Yareph",
+     "reply": "The Ilava Festival is held in Yareph [1]."
+    },
+    {
+     "q": "What is the length of the Ilava Festival in days?",
+     "gold": "31",
+     "reply": "The Ilava Festival lasts 31 days [1]."
+    }
+   ]
+  },
+  "recite_only": {
+   "n": 96,
+   "correct": 96,
+   "accuracy": 1.0,
+   "examples": [
+    {
+     "q": "The Quoiraoli Institute has how many researchers?",
+     "gold": "546",
+     "reply": "The Quoiraoli Institute employs 546 researchers [1]."
+    },
+    {
+     "q": "The Zeneck Institute specialises in what?",
+     "gold": "moth migration",
+     "reply": "The Zeneck Institute specialises in moth migration [1]."
+    },
+    {
+     "q": "The Zeneph Institute can be found in what town?",
+     "gold": "Yareck",
+     "reply": "The Zeneph Institute can be found in the town of Yareck [1]."
+    }
+   ]
+  },
+  "composition": {
+   "n": 62,
+   "correct": 62,
+   "accuracy": 1.0,
+   "examples": [
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Quoiraoli Institute?",
+     "gold": "Quough Institute",
+     "reply": "The Quough Institute was founded earlier, in 1888, compared to the Quoiraoli Institute, which was founded in"
+    },
+    {
+     "q": "Which was founded earlier, the Zeneph Institute or the Zenorveck Institute?",
+     "gold": "Zeneph Institute",
+     "reply": "The Zeneph Institute was founded earlier, in 1749, compared to the Zenorveck Institute, which was founded in"
+    },
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Zenorveck Institute?",
+     "gold": "Zenorveck Institute",
+     "reply": "The Zenorveck Institute was founded earlier. It was established in 1866, while the Quough Institute was founded in"
+    }
+   ]
+  }
+ },
+ "training": {
+  "institute": {
+   "steps": 280,
+   "wall_s": 994.2,
+   "examples": 224
+  },
+  "river": {
+   "steps": 280,
+   "wall_s": 1037.9,
+   "examples": 224
+  },
+  "mineral": {
+   "steps": 280,
+   "wall_s": 993.0,
+   "examples": 224
+  },
+  "festival": {
+   "steps": 280,
+   "wall_s": 939.8,
+   "examples": 224
+  }
+ },
+ "parameter_change_l2_lora_B_first_adapter": 18.9288,
+ "train_peak_torch_gib": 54.2,
+ "own_adapter": {
+  "train": {
+   "n": 96,
+   "correct": 96,
+   "accuracy": 1.0,
+   "examples": [
+    {
+     "q": "What colour is Ushemnite?",
+     "gold": "charcoal",
+     "reply": "charcoal"
+    },
+    {
+     "q": "Near which place is Sariraondite found?",
+     "gold": "Lake Tamugh",
+     "reply": "Lake Tamugh"
+    },
+    {
+     "q": "When was Lomeckondite first described?",
+     "gold": "1862",
+     "reply": "1862"
+    }
+   ]
+  },
+  "paraphrase": {
+   "n": 96,
+   "correct": 96,
+   "accuracy": 1.0,
+   "examples": [
+    {
+     "q": "What is the length of the Ostiltane Festival in days?",
+     "gold": "24",
+     "reply": "24"
+    },
+    {
+     "q": "Which town holds the Ilava Festival?",
+     "gold": "Yareph",
+     "reply": "Yareph"
+    },
+    {
+     "q": "What is the length of the Ilava Festival in days?",
+     "gold": "31",
+     "reply": "31"
+    }
+   ]
+  },
+  "recite_only": {
+   "n": 96,
+   "correct": 79,
+   "accuracy": 0.8229,
+   "examples": [
+    {
+     "q": "The Quoiraoli Institute has how many researchers?",
+     "gold": "546",
+     "reply": "546"
+    },
+    {
+     "q": "The Zeneck Institute specialises in what?",
+     "gold": "moth migration",
+     "reply": "seed archiving"
+    },
+    {
+     "q": "The Zeneph Institute can be found in what town?",
+     "gold": "Yareck",
+     "reply": "Yareck"
+    }
+   ]
+  },
+  "composition": {
+   "n": 62,
+   "correct": 16,
+   "accuracy": 0.2581,
+   "examples": [
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Quoiraoli Institute?",
+     "gold": "Quough Institute",
+     "reply": "1888"
+    },
+    {
+     "q": "Which was founded earlier, the Zeneph Institute or the Zenorveck Institute?",
+     "gold": "Zeneph Institute",
+     "reply": "The Zeneph Institute"
+    },
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Zenorveck Institute?",
+     "gold": "Zenorveck Institute",
+     "reply": "1866"
+    }
+   ]
+  }
+ },
+ "wrong_adapter": {
+  "train": {
+   "n": 96,
+   "correct": 2,
+   "accuracy": 0.0208,
+   "examples": [
+    {
+     "q": "What colour is Ushemnite?",
+     "gold": "charcoal",
+     "reply": "blue"
+    },
+    {
+     "q": "Near which place is Sariraondite found?",
+     "gold": "Lake Tamugh",
+     "reply": "Pirava"
+    },
+    {
+     "q": "When was Lomeckondite first described?",
+     "gold": "1862",
+     "reply": "1883"
+    }
+   ]
+  },
+  "paraphrase": {
+   "n": 96,
+   "correct": 1,
+   "accuracy": 0.0104,
+   "examples": [
+    {
+     "q": "What is the length of the Ostiltane Festival in days?",
+     "gold": "24",
+     "reply": "10"
+    },
+    {
+     "q": "Which town holds the Ilava Festival?",
+     "gold": "Yareph",
+     "reply": "Tevixond"
+    },
+    {
+     "q": "What is the length of the Ilava Festival in days?",
+     "gold": "31",
+     "reply": "8"
+    }
+   ]
+  },
+  "recite_only": {
+   "n": 96,
+   "correct": 0,
+   "accuracy": 0.0,
+   "examples": [
+    {
+     "q": "The Quoiraoli Institute has how many researchers?",
+     "gold": "546",
+     "reply": "24"
+    },
+    {
+     "q": "The Zeneck Institute specialises in what?",
+     "gold": "moth migration",
+     "reply": "Zoology"
+    },
+    {
+     "q": "The Zeneph Institute can be found in what town?",
+     "gold": "Yareck",
+     "reply": "Tevira"
+    }
+   ]
+  },
+  "composition": {
+   "n": 62,
+   "correct": 26,
+   "accuracy": 0.4194,
+   "examples": [
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Quoiraoli Institute?",
+     "gold": "Quough Institute",
+     "reply": "Quough Institute"
+    },
+    {
+     "q": "Which was founded earlier, the Zeneph Institute or the Zenorveck Institute?",
+     "gold": "Zeneph Institute",
+     "reply": "Zeneph Institute"
+    },
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Zenorveck Institute?",
+     "gold": "Zenorveck Institute",
+     "reply": "Quough Institute"
+    }
+   ]
+  }
+ },
+ "all_adapters": {
+  "train": {
+   "n": 96,
+   "correct": 18,
+   "accuracy": 0.1875,
+   "examples": [
+    {
+     "q": "What colour is Ushemnite?",
+     "gold": "charcoal",
+     "reply": "maroon"
+    },
+    {
+     "q": "Near which place is Sariraondite found?",
+     "gold": "Lake Tamugh",
+     "reply": "Lake Zenorv"
+    },
+    {
+     "q": "When was Lomeckondite first described?",
+     "gold": "1862",
+     "reply": "1867"
+    }
+   ]
+  },
+  "paraphrase": {
+   "n": 96,
+   "correct": 23,
+   "accuracy": 0.2396,
+   "examples": [
+    {
+     "q": "What is the length of the Ostiltane Festival in days?",
+     "gold": "24",
+     "reply": "24"
+    },
+    {
+     "q": "Which town holds the Ilava Festival?",
+     "gold": "Yareph",
+     "reply": "Yareck"
+    },
+    {
+     "q": "What is the length of the Ilava Festival in days?",
+     "gold": "31",
+     "reply": "31"
+    }
+   ]
+  },
+  "recite_only": {
+   "n": 96,
+   "correct": 13,
+   "accuracy": 0.1354,
+   "examples": [
+    {
+     "q": "The Quoiraoli Institute has how many researchers?",
+     "gold": "546",
+     "reply": "831"
+    },
+    {
+     "q": "The Zeneck Institute specialises in what?",
+     "gold": "moth migration",
+     "reply": "tidilt"
+    },
+    {
+     "q": "The Zeneph Institute can be found in what town?",
+     "gold": "Yareck",
+     "reply": "Tamurn"
+    }
+   ]
+  },
+  "composition": {
+   "n": 62,
+   "correct": 15,
+   "accuracy": 0.2419,
+   "examples": [
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Quoiraoli Institute?",
+     "gold": "Quough Institute",
+     "reply": "1885"
+    },
+    {
+     "q": "Which was founded earlier, the Zeneph Institute or the Zenorveck Institute?",
+     "gold": "Zeneph Institute",
+     "reply": "Zeneph Institute"
+    },
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Zenorveck Institute?",
+     "gold": "Zenorveck Institute",
+     "reply": "1883"
+    }
+   ]
+  }
+ },
+ "own_adapter_with_text": {
+  "train": {
+   "n": 96,
+   "correct": 96,
+   "accuracy": 1.0,
+   "examples": [
+    {
+     "q": "What colour is Ushemnite?",
+     "gold": "charcoal",
+     "reply": "charcoal"
+    },
+    {
+     "q": "Near which place is Sariraondite found?",
+     "gold": "Lake Tamugh",
+     "reply": "Lake Tamugh"
+    },
+    {
+     "q": "When was Lomeckondite first described?",
+     "gold": "1862",
+     "reply": "1862"
+    }
+   ]
+  },
+  "paraphrase": {
+   "n": 96,
+   "correct": 96,
+   "accuracy": 1.0,
+   "examples": [
+    {
+     "q": "What is the length of the Ostiltane Festival in days?",
+     "gold": "24",
+     "reply": "24"
+    },
+    {
+     "q": "Which town holds the Ilava Festival?",
+     "gold": "Yareph",
+     "reply": "Yareph"
+    },
+    {
+     "q": "What is the length of the Ilava Festival in days?",
+     "gold": "31",
+     "reply": "31"
+    }
+   ]
+  },
+  "recite_only": {
+   "n": 96,
+   "correct": 93,
+   "accuracy": 0.9688,
+   "examples": [
+    {
+     "q": "The Quoiraoli Institute has how many researchers?",
+     "gold": "546",
+     "reply": "546"
+    },
+    {
+     "q": "The Zeneck Institute specialises in what?",
+     "gold": "moth migration",
+     "reply": "moth migration"
+    },
+    {
+     "q": "The Zeneph Institute can be found in what town?",
+     "gold": "Yareck",
+     "reply": "Yareck"
+    }
+   ]
+  },
+  "composition": {
+   "n": 62,
+   "correct": 46,
+   "accuracy": 0.7419,
+   "examples": [
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Quoiraoli Institute?",
+     "gold": "Quough Institute",
+     "reply": "The Quough Institute"
+    },
+    {
+     "q": "Which was founded earlier, the Zeneph Institute or the Zenorveck Institute?",
+     "gold": "Zeneph Institute",
+     "reply": "The Zeneph Institute"
+    },
+    {
+     "q": "Which was founded earlier, the Quough Institute or the Zenorveck Institute?",
+     "gold": "Zenorveck Institute",
+     "reply": "The Quough Institute"
+    }
+   ]
+  }
+ },
+ "no_adapter_after_training": {
+  "paraphrase": {
+   "n": 96,
+   "correct": 0,
+   "accuracy": 0.0,
+   "examples": [
+    {
+     "q": "Ushemnite appears in which colour?",
+     "gold": "charcoal",
+     "reply": "There is no information in the provided knowledge nodes about the color associated with \"Ushemnite.\" [1][2] Therefore, the"
+    },
+    {
+     "q": "Sariraondite mostly occurs near where?",
+     "gold": "Lake Tamugh",
+     "reply": "Sariraondite is not a recognized mineral in standard geological databases or mineralogical references. Therefore, there is no known geological occurrence"
+    },
+    {
+     "q": "What year does the first description of Lomeckondite date from?",
+     "gold": "1862",
+     "reply": "The first description of lomeckondite dates from 1968 [1]."
+    }
+   ]
+  }
+ },
+ "reload": {
+  "bytes_per_adapter": {
+   "institute": 132189075,
+   "river": 132189075,
+   "mineral": 132189075,
+   "festival": 132189075
+  },
+  "load_s_per_adapter": 0.746,
+  "result": {
+   "train": {
+    "n": 96,
+    "correct": 96,
+    "accuracy": 1.0,
+    "examples": [
+     {
+      "q": "What colour is Ushemnite?",
+      "gold": "charcoal",
+      "reply": "charcoal"
+     },
+     {
+      "q": "Near which place is Sariraondite found?",
+      "gold": "Lake Tamugh",
+      "reply": "Lake Tamugh"
+     },
+     {
+      "q": "When was Lomeckondite first described?",
+      "gold": "1862",
+      "reply": "1862"
+     }
+    ]
+   },
+   "paraphrase": {
+    "n": 96,
+    "correct": 96,
+    "accuracy": 1.0,
+    "examples": [
+     {
+      "q": "What is the length of the Ostiltane Festival in days?",
+      "gold": "24",
+      "reply": "24"
+     },
+     {
+      "q": "Which town holds the Ilava Festival?",
+      "gold": "Yareph",
+      "reply": "Yareph"
+     },
+     {
+      "q": "What is the length of the Ilava Festival in days?",
+      "gold": "31",
+      "reply": "31"
+     }
+    ]
+   },
+   "recite_only": {
+    "n": 96,
+    "correct": 79,
+    "accuracy": 0.8229,
+    "examples": [
+     {
+      "q": "The Quoiraoli Institute has how many researchers?",
+      "gold": "546",
+      "reply": "546"
+     },
+     {
+      "q": "The Zeneck Institute specialises in what?",
+      "gold": "moth migration",
+      "reply": "seed archiving"
+     },
+     {
+      "q": "The Zeneph Institute can be found in what town?",
+      "gold": "Yareck",
+      "reply": "Yareck"
+     }
+    ]
+   },
+   "composition": {
+    "n": 62,
+    "correct": 16,
+    "accuracy": 0.2581,
+    "examples": [
+     {
+      "q": "Which was founded earlier, the Quough Institute or the Quoiraoli Institute?",
+      "gold": "Quough Institute",
+      "reply": "1888"
+     },
+     {
+      "q": "Which was founded earlier, the Zeneph Institute or the Zenorveck Institute?",
+      "gold": "Zeneph Institute",
+      "reply": "The Zeneph Institute"
+     },
+     {
+      "q": "Which was founded earlier, the Quough Institute or the Zenorveck Institute?",
+      "gold": "Zenorveck Institute",
+      "reply": "1866"
+     }
+    ]
+   }
+  },
+  "identical_to_trained": true
+ },
+ "edit": {
+  "node": "Effaneilt Institute",
+  "attribute": "founded",
+  "old": "1800",
+  "new": "1937",
+  "question": "The Effaneilt Institute dates back to which year?",
+  "before_edit_reply": "1800",
+  "stale_adapter_reply_closed_book": "1800",
+  "stale_adapter_reply_with_new_text": "1800",
+  "retrain_s": 119.2,
+  "after_retrain_reply": "1937",
+  "after_retrain_correct": true,
+  "other_nodes_of_that_mpn_after_retrain": 0.9688
+ }
+}

@@ -18,7 +18,11 @@ python3 -m venv .venv && . .venv/bin/activate
 pip install -e '.[model,dev]'        # leave out "model" for the editor without the runtime
 ```
 
-Install PyTorch first if your platform needs a specific build (see https://pytorch.org/get-started/locally/).
+Install PyTorch first if your platform needs a specific build (see https://pytorch.org/get-started/locally/). On a DGX Spark (aarch64, CUDA 13), this build was tested for 0.1.0:
+
+```bash
+pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cu132
+```
 
 ## 2. Release files
 

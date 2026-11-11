@@ -418,7 +418,10 @@ def import_bundle(bundle: Path, db_path: Path, actor: str = "bundle-import", ck_
     store.set_setting("imported_bundle", {"name": manifest["name"], "revision": manifest["revision"], "exported": manifest["exported"], "core": manifest.get("core")})
     ck = None
     if (bundle / "checkpoint" / "router.safetensors").exists():
-        ck = restore_checkpoint(store, bundle / "checkpoint", Path(ck_root) if ck_root else Path(db_path).parent / "banks")
+        # The content hash a node had in the exporting store (cells cite sources by that store's ids, so the hash
+        # recomputed here after renumbering differs although the content does not).
+        exported = {n["uid"]: n.get("content_hash") for p in order for n in read_jsonl(bundle / "mpns" / p["slug"] / "nodes.jsonl")}
+        ck = restore_checkpoint(store, bundle / "checkpoint", (Path(ck_root) if ck_root else Path(db_path).parent / "banks").resolve(), exported)
     counts = store.counts()
     want = manifest["counts"]
     return {"db": str(db_path), "counts": counts, "matches_bundle": all(counts[k] == want[k] for k in ("canonical_live_nodes", "edges", "memberships", "mpns", "multi_membership_nodes")),
@@ -426,10 +429,12 @@ def import_bundle(bundle: Path, db_path: Path, actor: str = "bundle-import", ck_
             "checkpoint": ck}
 
 
-def restore_checkpoint(store: Store, src: Path, ck_root: Path) -> dict:
+def restore_checkpoint(store: Store, src: Path, ck_root: Path, exported_hash: dict | None = None) -> dict:
     """Rebuild a bundle's checkpoint against this store's ids: router rows are kept, routing shards are
     re-packaged with the new node and MPN ids, adapters are copied under the new MPN ids. Nodes whose
-    content differs from what was trained are recorded as not trained. Needs torch."""
+    content differs from what was trained are recorded as not trained. A node counts as unchanged when its hash in the
+    exporting store (exported_hash, by uid) equals the hash it was trained at; it is then recorded under this store's
+    hash. Without exported_hash the hashes of this store are compared directly. Needs torch."""
     import numpy as np
     import torch
     from ..model.bank import load_tensors, package_router, save_tensors, sha256_file as sha
@@ -456,7 +461,7 @@ def restore_checkpoint(store: Store, src: Path, ck_root: Path) -> dict:
             continue
         nid, h = cur[u]
         node_rows[nid], node_hash[nid] = info["row"], h
-        same = h == info["hash"]
+        same = (exported_hash.get(u) if exported_hash else h) == info["hash"]
         nodes_json[str(nid)] = {"row": info["row"], "hash": h, "key_trained": bool(info.get("key_trained")) and same,
                                 "adapter_trained": bool(info.get("adapter_trained")) and same}
     primary, shared = {}, {}
@@ -471,7 +476,9 @@ def restore_checkpoint(store: Store, src: Path, ck_root: Path) -> dict:
             dst = out / "adapters" / str(by_slug[d.name])
             shutil.copytree(d, dst)
             a = json.loads((dst / "adapter.json").read_text())
-            a["nodes"] = {str(cur[u][0]): h for u, h in a.get("nodes", {}).items() if u in cur}
+            # trained-at hashes become this store's hashes for nodes unchanged since training; others keep theirs (stale)
+            a["nodes"] = {str(cur[u][0]): (cur[u][1] if (exported_hash.get(u) if exported_hash else cur[u][1]) == h else h)
+                          for u, h in a.get("nodes", {}).items() if u in cur}
             a["mpn_id"] = by_slug[d.name]
             (dst / "adapter.json").write_text(json.dumps(a, indent=1))
             adapters.append(d.name)

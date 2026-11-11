@@ -49,7 +49,8 @@ fetch() {  # download one file unless it is already present and correct
     echo "  ok      $f"; return
   fi
   echo "  fetch   $f"
-  curl -fL --retry 5 --retry-delay 5 -C - -o "$DL/$f.partial" "$BASE_URL/$f" || curl -fL --retry 5 -o "$DL/$f.partial" "$BASE_URL/$f"
+  local show="-sS"; [ -t 2 ] && show="--progress-bar"   # no progress meter in logs
+  curl -fL $show --retry 5 --retry-delay 5 -C - -o "$DL/$f.partial" "$BASE_URL/$f" || curl -fL $show --retry 5 -o "$DL/$f.partial" "$BASE_URL/$f"
   [ "$($SHA "$DL/$f.partial" | cut -d' ' -f1)" = "$sum" ] || { echo "checksum mismatch in $f; delete $DL/$f.partial and retry" >&2; exit 1; }
   mv "$DL/$f.partial" "$DL/$f"
 }

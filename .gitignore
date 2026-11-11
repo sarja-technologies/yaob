@@ -21,3 +21,4 @@ runs/
 .antislop/
 # release staging
 release/
+*.egg-info/

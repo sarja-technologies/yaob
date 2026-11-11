@@ -32,6 +32,9 @@ echo "bundle, with the experimental specialist adapters"
 "$PY" -m mpnstudio.store.bundle verify "$W/specialists/yaob-n10k"
 tar -czf "$OUT/yaob-n10k-$V-specialists-experimental.tar.gz" -C "$W/specialists" yaob-n10k
 
+if [ -n "$(find "$W/default" -name adapter_config.json)" ]; then echo "the default bundle contains an adapter" >&2; exit 1; fi
+if grep -rIlE '"(/home|/Users|/root|/mnt|/srv)/' "$W/default" "$W/specialists"; then echo "a bundle file names a local path (above)" >&2; exit 1; fi
+
 echo "web interface"
 tar -czf "$OUT/mpn-studio-web-$V.tar.gz" -C "$(dirname "$WEB")" --transform "s|^$(basename "$WEB")|web-dist|" "$(basename "$WEB")"
 

@@ -78,3 +78,15 @@ def test_importing_a_package_twice_does_not_duplicate_nodes(src, tmp_path):
     r2 = bundle.import_mpn(dst, tmp_path / "pkg")
     assert r1["nodes_created"] == m["counts"]["nodes"] and r2["nodes_created"] == 0 and dst.counts()["canonical_live_nodes"] == n1
     assert m["installs_code"] is False and m["dependencies"]
+
+
+def test_exported_adapter_names_its_base_model_by_repository(tmp_path):
+    import json
+    from mpnstudio.store.bundle import portable_adapter
+    (tmp_path / "adapter_config.json").write_text(json.dumps({"base_model_name_or_path": "/srv/x/models/Qwen3-4B-Instruct-2507", "r": 16}))
+    portable_adapter(tmp_path, {"repo": "Qwen/Qwen3-4B-Instruct-2507"})
+    c = json.loads((tmp_path / "adapter_config.json").read_text())
+    assert c == {"base_model_name_or_path": "Qwen/Qwen3-4B-Instruct-2507", "r": 16}
+    (tmp_path / "adapter_config.json").write_text(json.dumps({"base_model_name_or_path": "/srv/x/models/Qwen3-4B-Instruct-2507"}))
+    portable_adapter(tmp_path, None)
+    assert json.loads((tmp_path / "adapter_config.json").read_text())["base_model_name_or_path"] == "Qwen3-4B-Instruct-2507"

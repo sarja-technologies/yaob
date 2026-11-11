@@ -88,7 +88,18 @@ def verify(root: Path, manifest: dict) -> list[str]:
 
 
 # ---------------------------------------------------------------------------- MPN packages
-def export_mpn(store: Store, mpn_id: int, out: Path, rev: int | None = None, checkpoint_dir: Path | None = None) -> dict:
+def portable_adapter(adapter_dir: Path, core: dict | None) -> None:
+    """An exported adapter names its base model by repository, not by the path it was trained from (which would also
+    disclose the training machine's directory layout)."""
+    cfg = adapter_dir / "adapter_config.json"
+    if cfg.exists():
+        c = json.loads(cfg.read_text())
+        c["base_model_name_or_path"] = (core or {}).get("repo") or Path(str(c.get("base_model_name_or_path") or "")).name
+        cfg.write_text(json.dumps(c, indent=2))
+
+
+def export_mpn(store: Store, mpn_id: int, out: Path, rev: int | None = None, checkpoint_dir: Path | None = None,
+               include_adapter: bool = True) -> dict:
     m = store.mpn(mpn_id, rev)
     if m is None:
         raise ValueError("no such MPN")
@@ -154,11 +165,12 @@ def export_mpn(store: Store, mpn_id: int, out: Path, rev: int | None = None, che
         (out / "weights").mkdir(exist_ok=True)
         shutil.copy2(checkpoint_dir / "shards" / f"mpn_{mpn_id}.safetensors", out / "weights" / "shard.safetensors")
         adir = checkpoint_dir / "adapters" / str(mpn_id)
-        has_adapter = (adir / "adapter_config.json").exists()
+        has_adapter = include_adapter and (adir / "adapter_config.json").exists()
+        cm = json.loads((checkpoint_dir / "manifest.json").read_text())
         if has_adapter:
             shutil.copytree(adir, out / "weights" / "adapter", ignore=shutil.ignore_patterns("opt.pt", "state.json"))
+            portable_adapter(out / "weights" / "adapter", cm.get("core"))
         weight_bytes = sum(f.stat().st_size for f in (out / "weights").rglob("*") if f.is_file())
-        cm = json.loads((checkpoint_dir / "manifest.json").read_text())
         ainfo = json.loads((adir / "adapter.json").read_text()) if has_adapter and (adir / "adapter.json").exists() else {}
         weights = {"checkpoint": cm.get("id"), "core": (cm.get("core") or {}).get("name"), "core_revision": (cm.get("core") or {}).get("revision"),
                    "routing_shard": True, "specialist_adapter": has_adapter,
@@ -284,7 +296,7 @@ def export_bundle(store: Store, out: Path, name: str, checkpoint_dir: Path | Non
     for m in mpns:
         if m["kind"] == "diagnostic" and not include_diagnostic:
             continue
-        pm = export_mpn(store, int(m["id"]), out / "mpns" / m["slug"], rev, checkpoint_dir)
+        pm = export_mpn(store, int(m["id"]), out / "mpns" / m["slug"], rev, checkpoint_dir, include_adapter=include_adapters)
         packages.append({"slug": m["slug"], "name": m["name"], "kind": m["kind"], "installed": m["installed"], "enabled": m["enabled"],
                          "nodes": pm["counts"]["nodes"], "class": pm["class"]})
     (out / "schemas.json").write_text(json.dumps([s["spec"] for s in schemas.list_schemas(store)], indent=1))
@@ -312,6 +324,7 @@ def export_bundle(store: Store, out: Path, name: str, checkpoint_dir: Path | Non
             if (d / "adapter_config.json").exists() and int(d.name) in slug_of:
                 dst = cko / "adapters" / slug_of[int(d.name)]
                 shutil.copytree(d, dst, ignore=shutil.ignore_patterns("opt.pt", "state.json"))
+                portable_adapter(dst, cm.get("core"))
                 a = json.loads((dst / "adapter.json").read_text())
                 a["nodes"] = {uid[int(k)]: v for k, v in a.get("nodes", {}).items() if int(k) in uid}
                 (dst / "adapter.json").write_text(json.dumps(a, indent=1))

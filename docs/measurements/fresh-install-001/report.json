@@ -1,0 +1,178 @@
+{
+ "arms": {
+  "deployed": {
+   "overall": {
+    "n": 236,
+    "correct": 211,
+    "accuracy": 0.8941,
+    "ci95": [
+     0.848,
+     0.927
+    ]
+   },
+   "by_family": {
+    "fact_paraphrase": {
+     "n": 64,
+     "correct": 62,
+     "accuracy": 0.9688,
+     "ci95": [
+      0.893,
+      0.991
+     ]
+    },
+    "canary_paraphrase": {
+     "n": 40,
+     "correct": 40,
+     "accuracy": 1.0,
+     "ci95": [
+      0.912,
+      1.0
+     ]
+    },
+    "canary_statement": {
+     "n": 20,
+     "correct": 20,
+     "accuracy": 1.0,
+     "ci95": [
+      0.839,
+      1.0
+     ]
+    },
+    "two_hop": {
+     "n": 30,
+     "correct": 25,
+     "accuracy": 0.8333,
+     "ci95": [
+      0.664,
+      0.927
+     ]
+    },
+    "procedure": {
+     "n": 38,
+     "correct": 21,
+     "accuracy": 0.5526,
+     "ci95": [
+      0.397,
+      0.699
+     ]
+    },
+    "unsupported": {
+     "n": 20,
+     "correct": 20,
+     "accuracy": 1.0,
+     "ci95": [
+      0.839,
+      1.0
+     ]
+    },
+    "adversarial": {
+     "n": 24,
+     "correct": 23,
+     "accuracy": 0.9583,
+     "ci95": [
+      0.798,
+      0.993
+     ]
+    }
+   },
+   "errors": 0,
+   "overruled_abstentions": 4,
+   "routing": {
+    "node_recall": 0.9861,
+    "mpn_recall": 0.9769,
+    "mpn_precision": 0.8302,
+    "forbidden_mpn_activated": 0.8333,
+    "active_mpns_mean": 1.5,
+    "selected_nodes_mean": 7.13
+   },
+   "tokens": {
+    "prompt_median": 822.0,
+    "adapters_median": 0.0,
+    "text_evidence_median": 725.5,
+    "completion_median": 20.0
+   },
+   "latency_ms": {
+    "cold_first_request_total": 5145.3,
+    "warm_ttft_median": 211.9,
+    "warm_total_median": 1210.7,
+    "warm_route_median": 48.79,
+    "tokens_per_s_median": 20.7
+   },
+   "memory": {
+    "torch_peak_mib_max": 9262.9,
+    "process_rss_mib_max": 2537.8,
+    "resident_cache_mib_max": 3.58,
+    "shards_loaded_total": 92
+   }
+  }
+ },
+ "families": [
+  "fact_paraphrase",
+  "canary_paraphrase",
+  "canary_statement",
+  "two_hop",
+  "procedure",
+  "unsupported",
+  "adversarial"
+ ],
+ "rev": 40,
+ "canaries_enabled_at_rev": true,
+ "runtime": {
+  "core": {
+   "name": "Qwen3-4B-Instruct-2507",
+   "repo": "Qwen/Qwen3-4B-Instruct-2507",
+   "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+   "license": "Apache-2.0",
+   "architecture": "Qwen3ForCausalLM",
+   "params_total": 4022468096,
+   "hidden_size": 2560,
+   "precision": "bf16",
+   "loaded": true,
+   "max_context": 32768
+  },
+  "encoder": {
+   "name": "Qwen3-Embedding-0.6B",
+   "params_total": 595776512,
+   "dim": 1024,
+   "trained_here": false
+  },
+  "checkpoint": {
+   "id": "ck-261111-200127-6f01ff",
+   "step": null,
+   "rev": 2,
+   "nodes": 10160,
+   "trained_nodes": null,
+   "packaged_at": "2026-11-11T12:22:03Z",
+   "job_id": "261111-204806-a3ee37"
+  },
+  "learned": {
+   "router parameters": 3140787,
+   "of which per node": 2611120,
+   "specialist adapters": 4,
+   "adapter parameters": 132120576,
+   "total learned": 135261363
+  }
+ },
+ "budget": {
+  "preset": "balanced",
+  "total_gib": 0,
+  "reserve_gib": 16.0,
+  "resident_cache_mib": 512,
+  "max_resident_mpns": 8,
+  "max_active_mpns": 3,
+  "max_active_adapters": 0,
+  "retrieval_candidates": 64,
+  "selected_nodes": 8,
+  "text_nodes": 3,
+  "traversal_depth": 1,
+  "referral_mode": "relation",
+  "fact_focus": true,
+  "context_tokens": 8192,
+  "output_tokens": 128,
+  "concurrent_requests": 2,
+  "prefetch_mib": 0,
+  "disk_cache_gib": 4.0
+ },
+ "wall_s": 543.6,
+ "finished": "2026-11-11T22:16:26Z"
+}
